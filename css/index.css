@@ -1,0 +1,42 @@
+.page-title {
+    color: rgb(245, 245, 245);
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 40px;
+    font-weight: bold;
+    width: 100%;
+    border-style: groove;
+    border-width: 5px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+}
+
+.intro {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+    float: left;
+    border-style: groove;
+    border-color: rgb(245, 245, 245);
+    border-width: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 25px 50px 25px 50px;
+    overflow-x: hidden;
+}
+
+.link-descriptions {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 50%;
+    float: right;
+    border-style: groove;
+    border-color: rgb(245, 245, 245);
+    border-width: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 25px 50px 25px 50px;
+    overflow-x: hidden;
+}
+
+.link-contents a {
+    color: rgb(245, 245, 245);
+}
