@@ -1,3 +1,20 @@
+.content {
+    display: table;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: rgb(245, 245, 245);
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: auto;
+    position: relative;
+    top: 40px;
+    width: 80%;
+    height: fit-content;
+    border-radius: 30px;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(110, 75, 255);
+    overflow: hidden;
+}
+
 .page-title {
     color: rgb(245, 245, 245);
     background-color: rgba(0, 0, 0, 0.8);
@@ -20,21 +37,30 @@
     border-width: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 25px 50px 25px 50px;
+    padding: 25px 100px 50px 100px;
     overflow-x: hidden;
+}
+
+.intro img {
+    border-radius: 20px;
+    opacity: 0.5;
 }
 
 .link-descriptions {
     background-color: rgba(0, 0, 0, 0.8);
     width: 50%;
-    float: right;
+    float: left;
     border-style: groove;
     border-color: rgb(245, 245, 245);
     border-width: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 25px 50px 25px 50px;
+    padding: 25px 100px 50px 100px;
     overflow-x: hidden;
+}
+
+.link-contents {
+    text-align: center;
 }
 
 .link-contents a {

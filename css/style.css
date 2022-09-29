@@ -5,12 +5,18 @@
 }
 
 html, body {
-    min-width: 800px;
+    min-width: 930px;
     height: 100%;
     background-image: url("../images/city2.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    overflow: hidden;
+}
+
+.main {
+    height: 100%;
+    overflow-y: scroll;
 }
 
 nav {
@@ -45,6 +51,10 @@ nav {
     white-space: nowrap;
 }
 
+.logo-name h3 {
+    text-shadow: 2px 2px 2px rgb(110, 75, 255);
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
@@ -62,6 +72,7 @@ nav {
     letter-spacing: 2px;
     font-weight: bold;
     font-size: 20px;
+    text-shadow: 2px 2px 2px rgb(110, 75, 255);
 }
 
 .burger {
@@ -82,20 +93,22 @@ nav {
     }
 
     .logo {
-        margin-right: 225px;
+        margin-right: 175px;
         position: relative;
     }
 
     .nav-links {
         position: fixed;
+        top: 0;
         right: 0;
-        bottom: 0;
-        width: 18vh;
-        min-height: 100vh;
-        height: 89vh;
+        width: 15vh;
+        height: 100vh;
+        min-width: 15%;
+        min-height: 100%;
         background-color: rgb(0, 0, 0);
         display: flex;
         flex-direction: column;
+        flex: 0 0 auto;
         align-items: center;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
@@ -117,10 +130,6 @@ nav {
     .burger {
         display: block;
         margin-right: 100px;
-    }
-
-    .content {
-        font-size: 100px;
     }
 }
 
@@ -155,20 +164,4 @@ nav {
     color: rgb(245, 245, 245);
     height: 100%;
     width: 100%;
-
-}
-
-.content {
-    display: table;
-    font-size: 22px;
-    letter-spacing: 2px;
-    color: rgb(245, 245, 245);
-    background-color: rgba(255, 255, 255, 0.15);
-    margin: auto;
-    position: relative;
-    text-align: center;
-    top: 40px;
-    width: 80%;
-    height: fit-content;
-    border-radius: 30px;
 }
