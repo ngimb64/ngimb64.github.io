@@ -28,6 +28,7 @@
     padding: 20px;
 }
 
+
 .intro {
     background-color: rgba(0, 0, 0, 0.8);
     width: 50%;
@@ -37,13 +38,22 @@
     border-width: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 25px 100px 50px 100px;
+    padding: 25px 75px 50px 75px;
     overflow-x: hidden;
 }
 
-.intro img {
-    border-radius: 20px;
+.intro-image {
+    height: 100%;
+    width: 100%;
+}
+
+.intro-image img {
+    padding-top: 50px;
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 30px;
     opacity: 0.5;
+    object-fit: cover;
 }
 
 .link-descriptions {
@@ -55,7 +65,7 @@
     border-width: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 25px 100px 50px 100px;
+    padding: 25px 75px 50px 75px;
     overflow-x: hidden;
 }
 
@@ -65,4 +75,14 @@
 
 .link-contents a {
     color: rgb(245, 245, 245);
+}
+
+@media screen and (max-width: 1145px) {
+    .intro {
+        padding: 25px 50px 50px 50px;
+    }
+
+    .link-descriptions {
+        padding: 25px 50px 50px 50px;
+    }
 }
