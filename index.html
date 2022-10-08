@@ -1,90 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Home
+---
+<link rel="stylesheet" href="Assets/css/index.css">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
-    <script src="javascript/jQuery.js"></script>
-    <!-- For Firefox, Chrome, Opera -->
-    <link rel="icon" type="image/png" href="images/armor_icon.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="images/armor_icon.png" sizes="32x32">
-    <!-- For Internet Explorer -->
-    <link rel="icon" type="image/x-icon" href="images/armor_icon.png" >
-    <link rel="shortcut icon" type="image/x-icon" href="images/armor_icon.png"/>
-    <title>Nick Gimbel || Cyber Engineer</title>
-</head>
+<div class="content">
+    <div class="page-title"><h4>Home</h4></div>
 
-<body>
-    <div class="main">
-        <nav>
-            <div class="logo">
-                <img src="images/binary_icon.png" width="80" height="80" alt="Binary Icon">
-                <div class="logo-name"><h3>Nicholas Gimbel</h3></div>
-                <img src="images/binary_icon.png" width="80" height="80" alt="Binary Icon">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="html/about.html">About</a></li>
-                <li><a href="html/blog.html">Blog</a></li>
-                <li><a href="html/projects.html">Projects</a></li>
-                <li><a href="html/services.html">Services</a></li>
-                <li><a href="html/contact.html">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+    <div class="intro">
+        <h3>Introduction</h3>
+        <br>
+        <p>
+            Hello, my name is Nicholas Gimbel and welcome to my website. I created this
+            site as a means to share knowledge, demonstrate my projects, provide programming
+            services, and an easily accessible means of contact.
+        </p>
+        <div class="intro-image"><img src="Assets/images/code2.jpg" alt="Laptop"></div>
+    </div>
 
-        <div class="container-fluid">
-            <div class="content">
-                <div class="page-title">
-                    <h4>Home</h4>
-                </div>
-
-                <div class="intro">
-                    <h3>Introduction</h3>
-                    <br>
-                    <p>
-                        Hello, my name is Nicholas Gimbel and welcome to my website. I created this
-                        site as a means to share knowledge, demonstrate my projects, provide programming
-                        services, and an easily accessible means of contact.
-                    </p>
-                    <div class="intro-image"><img src="images/code2.jpg" alt="Laptop"></div>
-                </div>
-
-                <div class="link-descriptions">
-                    <div class="link-contents">
-                        <h3>Site Map</h3>
-                        <br>
-                        <a href="html/about.html">About</a>
-                        <p>Provides more information about me, my skill's, and  a copy of my resume.</p>
-                        <br>
-                        <a href="html/blog.html">Blog</a>
-                        <p>Blog post, tutorials, and write-ups</p>
-                        <br>
-                        <a href="html/projects.html">Projects</a>
-                        <p>Links to my projects and articles on my project experiences.</p>
-                        <br>
-                        <a href="html/services.html">Services</a>
-                        <p>Programming services offered.</p>
-                        <br>
-                        <a href="html/contact.html">Contact</a>
-                        <p>Methods of contact.</p>
-                    </div>
-                </div>
-            </div>
+    <div class="link-descriptions">
+        <div class="link-contents">
+            <h3>Site Map</h3>
+            <br>
+            <a href="about.html">About</a>
+            <p>Provides more information about me, my skill's, and  a copy of my resume.</p>
+            <br>
+            <a href="blog.html">Blog</a>
+            <p>Blog post, tutorials, and write-ups</p>
+            <br>
+            <a href="projects.html">Projects</a>
+            <p>Links to my projects and articles on my project experiences.</p>
+            <br>
+            <a href="services.html">Services</a>
+            <p>Programming services offered.</p>
+            <br>
+            <a href="contact.html">Contact</a>
+            <p>Methods of contact.</p>
         </div>
     </div>
 
     <script>
         $(".content").hide().delay(500).fadeIn(2000);
     </script>
-    <script src="javascript/nav.js"></script>
-</body>
-
-</html>
+</div>

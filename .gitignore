@@ -1,5 +1,7 @@
-# Pycharm files #
+# Webstorm files #
 .idea/*
 
-# venv files #
-venv/*
+# Jekyll #
+_site
+.jekyll-metadata
+*-cache/
