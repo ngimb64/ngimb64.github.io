@@ -3,11 +3,11 @@
     font-size: 22px;
     letter-spacing: 2px;
     color: rgb(245, 245, 245);
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(110, 75, 255, 0.1);
     margin: auto;
     position: relative;
     top: 40px;
-    width: 80%;
+    width: 90%;
     height: fit-content;
     border-radius: 30px;
     text-align: center;
@@ -17,7 +17,7 @@
 
 .page-title {
     color: rgb(245, 245, 245);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
     font-size: 40px;
     font-weight: bold;
     width: 100%;
@@ -29,8 +29,8 @@
 }
 
 
-.intro {
-    background-color: rgba(0, 0, 0, 0.8);
+.left-box {
+    background-color: rgba(0, 0, 0, 0.85);
     width: 50%;
     float: left;
     border-style: groove;
@@ -42,12 +42,12 @@
     overflow-x: hidden;
 }
 
-.intro-image {
+.left-box-image {
     height: 100%;
     width: 100%;
 }
 
-.intro-image img {
+.left-box-image img {
     padding-top: 50px;
     max-height: 100%;
     max-width: 100%;
@@ -56,8 +56,8 @@
     object-fit: cover;
 }
 
-.link-descriptions {
-    background-color: rgba(0, 0, 0, 0.8);
+.right-box {
+    background-color: rgba(0, 0, 0, 0.85);
     width: 50%;
     float: left;
     border-style: groove;
@@ -69,20 +69,20 @@
     overflow-x: hidden;
 }
 
-.link-contents {
+.right-box-contents {
     text-align: center;
 }
 
-.link-contents a {
+.right-box-contents a {
     color: rgb(245, 245, 245);
 }
 
-@media screen and (max-width: 1145px) {
-    .intro {
+@media screen and (max-width: 1157px) {
+    .left-box {
         padding: 25px 50px 50px 50px;
     }
 
-    .link-descriptions {
+    .right-box {
         padding: 25px 50px 50px 50px;
     }
 }
