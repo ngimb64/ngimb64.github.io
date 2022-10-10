@@ -1,0 +1,28 @@
+.grid-container {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    border-style: groove;
+    border-color: rgb(245, 245, 245);
+    border-width: 5px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.grid-cell {
+    margin: 15px;
+    background-color: rgba(0, 0, 0, 0.35);
+    min-width: 300px;
+    min-height: 300px;
+    text-align: center;
+    border-style: double;
+    border-color: rgb(110, 75, 255);
+    border-width: 5px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgb(245, 245, 245);
+    -moz-box-shadow: 0 5px 20px rgb(245, 245, 245);
+    -o-box-shadow: 0 5px 20px rgb(245, 245, 245);
+    -webkit-box-shadow: 0 5px 20px rgb(245, 245, 245);
+}

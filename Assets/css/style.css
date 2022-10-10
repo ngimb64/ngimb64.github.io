@@ -31,6 +31,10 @@ nav {
     border-width: 10px;
     overflow-x: hidden;
     z-index: 9999;
+    box-shadow: 0 10px 20px rgb(245, 245, 245);
+    -moz-box-shadow: 0 10px 20px rgb(245, 245, 245);
+    -o-box-shadow: 0 2px 15px rgb(245, 245, 245);
+    -webkit-box-shadow: 0 2px 15px rgb(245, 245, 245);
 }
 
 .nav-links {
