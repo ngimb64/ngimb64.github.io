@@ -46,18 +46,18 @@
     overflow-x: hidden;
 }
 
-.left-box-image {
+.left-box-image .right-box-image {
     float: left;
     height: 100%;
     width: 100%;
 }
 
+
 .left-box-image img {
-    padding-top: 50px;
     max-height: 100%;
     max-width: 100%;
     border-radius: 30px;
-    opacity: 0.5;
+    opacity: 0.35;
     object-fit: cover;
 }
 
@@ -72,6 +72,14 @@
     border-bottom-right-radius: 20px;
     padding: 25px 75px 50px 75px;
     overflow-x: hidden;
+}
+
+.right-box-image img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 30px;
+    opacity: 0.35;
+    object-fit: cover;
 }
 
 .right-box-contents {

@@ -2,3 +2,30 @@
 layout: default
 title: Contact
 ---
+<link rel="stylesheet" href="Assets/css/index.css">
+<link rel="stylesheet" href="Assets/css/contact.css">
+
+<div class="content">
+    <div class="page-title"><h4>{{ page.title }}</h4></div>
+
+    <div class="form-box">
+        <form action="http://formspree.io/ngimbel64@gmail.com">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="firstname" placeholder="Your name ..">
+
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="lastname" placeholder="Your last name ..">
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Message subject ..">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Message content .."></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        $(".content").hide().delay(500).fadeIn(2000);
+    </script>
+</div>

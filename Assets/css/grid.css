@@ -15,7 +15,7 @@
     margin: 15px;
     background-color: rgba(0, 0, 0, 0.35);
     min-width: 300px;
-    min-height: 300px;
+    min-height: 400px;
     text-align: center;
     border-style: double;
     border-color: rgb(110, 75, 255);
@@ -25,4 +25,10 @@
     -moz-box-shadow: 0 5px 20px rgb(245, 245, 245);
     -o-box-shadow: 0 5px 20px rgb(245, 245, 245);
     -webkit-box-shadow: 0 5px 20px rgb(245, 245, 245);
+}
+
+@media screen and (max-width: 800px) {
+    .grid-container {
+        grid-template-columns: repeat(1, auto);
+    }
 }
