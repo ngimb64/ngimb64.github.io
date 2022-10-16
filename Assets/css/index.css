@@ -93,9 +93,11 @@
 @media screen and (max-width: 1157px) {
     .left-box {
         padding: 25px 50px 50px 50px;
+        width: 100%;
     }
 
     .right-box {
         padding: 25px 50px 50px 50px;
+        width: 100%;
     }
 }
