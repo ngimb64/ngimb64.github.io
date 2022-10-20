@@ -5,7 +5,7 @@
 }
 
 html, body {
-    min-width: 300px;
+    min-width: 320px;
     height: 100%;
     background-image: url("../images/city2.jpg");
     background-repeat: no-repeat;
@@ -25,9 +25,10 @@ nav {
     float: left;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
     min-height: 8vh;
     min-width: 100%;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
     font-family: serif, sans-serif;
     border-color: rgb(110, 75, 255);
     border-style: double;
@@ -47,7 +48,6 @@ nav {
 
 .nav-links li {
     list-style: none;
-    float: right;
 }
 
 .nav-links a {
@@ -63,8 +63,7 @@ nav {
     position: relative;
     align-items: center;
     display: flex;
-    height: 100%;
-    width: 40vw;
+    width: 55%;
 }
 
 .logo-img img {
@@ -80,7 +79,7 @@ nav {
 }
 
 .logo-name h3 {
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: clamp(14px, 2vw, 22px);
     letter-spacing: 5px;
     color: rgb(245, 245, 245);
     text-transform: uppercase;
@@ -89,10 +88,11 @@ nav {
 
 .burger {
     display: none;
+    min-width: 5vh;
 }
 
 .burger div {
-    width: 25px;
+    min-width: 100%;
     height: 3px;
     background-color: rgb(245, 245, 245);
     margin: 5px;
@@ -105,25 +105,23 @@ nav {
     }
 
     .logo {
-        margin-right: 175px;
         position: relative;
-        padding-left: 20px;
     }
 
     .nav-links {
         position: fixed;
         bottom: 0;
         left: 0;
-        height: 15vh;
-        width: 100vh;
+        height: 82%;
+        width: 100%;
         min-height: 15vh;
         min-width: 100vw;
         background-color: rgb(0, 0, 0);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex: 0 0 auto;
         align-items: center;
-        transform: translateY(100%);
+        transform: translateX(100%);
         transition: transform 0.5s ease-in;
         border-color: rgb(110, 75, 255);
         border-style: double;
@@ -142,7 +140,6 @@ nav {
 
     .burger {
         display: block;
-        margin-right: 40px;
     }
 }
 
