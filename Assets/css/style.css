@@ -26,7 +26,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    min-height: 8vh;
+    min-height: 15vh;
     min-width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     font-family: serif, sans-serif;
@@ -40,10 +40,40 @@ nav {
     -webkit-box-shadow: 0 2px 15px rgb(245, 245, 245);
 }
 
+
+
+.logo {
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 55%;
+}
+
+.logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 30px;
+}
+
+.logo-name {
+    width: fit-content;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.logo-name h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    letter-spacing: 5px;
+    color: rgb(245, 245, 245);
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgb(110, 75, 255);
+}
+
 .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 45%;
+    width: 50%;
+    padding-right: 20px;
 }
 
 .nav-links li {
@@ -55,73 +85,40 @@ nav {
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
-    font-size: clamp(16px, 2vw, 20px);
-    text-shadow: 2px 2px 2px rgb(110, 75, 255);
-}
-
-.logo {
-    position: relative;
-    align-items: center;
-    display: flex;
-    width: 55%;
-}
-
-.logo-img img {
-    max-height: 100%;
-    max-width: 100%;
-    border-radius: 30px;
-}
-
-.logo-name {
-    width: fit-content;
-    height: 100%;
-    white-space: nowrap;
-}
-
-.logo-name h3 {
-    font-size: clamp(14px, 2vw, 22px);
-    letter-spacing: 5px;
-    color: rgb(245, 245, 245);
-    text-transform: uppercase;
+    font-size: clamp(1rem, 2.5vh, 1.25rem);
     text-shadow: 2px 2px 2px rgb(110, 75, 255);
 }
 
 .burger {
     display: none;
-    min-width: 5vh;
+    min-width: 25px;
 }
 
 .burger div {
     min-width: 100%;
     height: 3px;
     background-color: rgb(245, 245, 245);
-    margin: 5px;
+    margin: 5px 5px 5px 10px;
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1145px) {
+@media screen and (max-width: 950px) {
     body {
         overflow-x: hidden;
-    }
-
-    .logo {
-        position: relative;
     }
 
     .nav-links {
         position: fixed;
         bottom: 0;
         left: 0;
-        height: 82%;
+        height: 84.5vh;
         width: 100%;
-        min-height: 15vh;
-        min-width: 100vw;
         background-color: rgb(0, 0, 0);
         display: flex;
         flex-direction: column;
         flex: 0 0 auto;
         align-items: center;
-        transform: translateX(100%);
+        transform: translateY(100%);
         transition: transform 0.5s ease-in;
         border-color: rgb(110, 75, 255);
         border-style: double;
@@ -130,8 +127,8 @@ nav {
         overflow: hidden;
     }
 
-    .nav-links a {
-        font-size: 16px;
+    .logo {
+        margin-right: 30px;
     }
 
     .nav-links li {
@@ -143,42 +140,24 @@ nav {
     }
 }
 
-@media screen and (max-height: 475px) {
-    .nav-links {
-        min-height: 17.5%;
-    }
-}
-
-@media screen and (max-height: 300px) {
-    .nav-links {
-        min-height: 20%;
-    }
-}
-
-@media screen and (max-height: 200px) {
-   .nav-links {
-       min-height: 25%;
-   }
-}
-
-@media screen and (max-height: 135px) {
+@media screen and (max-height: 550px) and (max-width: 950px) {
     .nav-links {
         display: none;
     }
 }
 
 .nav-active {
-    transform: translateX(0%);
+    transform: translateY(0%);
 }
 
 @keyframes navLinkFade {
     from {
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateY(-50px);
     }
     to {
         opacity: 1;
-        transform: translateX(0px);
+        transform: translateY(0px);
     }
 }
 

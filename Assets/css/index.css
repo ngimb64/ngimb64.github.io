@@ -1,6 +1,6 @@
 .content {
     display: table;
-    font-size: 22px;
+    font-size: clamp(1rem, 2vw, 1.15rem);
     letter-spacing: 2px;
     color: rgb(245, 245, 245);
     background-color: rgba(110, 75, 255, 0.1);
@@ -22,7 +22,7 @@
 .page-title {
     color: rgb(245, 245, 245);
     background-color: rgba(0, 0, 0, 0.85);
-    font-size: 40px;
+    font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bold;
     width: 100%;
     border-style: groove;
@@ -90,7 +90,7 @@
     color: rgb(245, 245, 245);
 }
 
-@media screen and (max-width: 1157px) {
+@media screen and (max-width: 900px) {
     .left-box {
         padding: 25px 50px 50px 50px;
         width: 100%;
@@ -99,5 +99,7 @@
     .right-box {
         padding: 25px 50px 50px 50px;
         width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 }
