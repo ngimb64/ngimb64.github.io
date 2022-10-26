@@ -6,6 +6,7 @@
 
 html, body {
     min-width: 320px;
+    min-height: 475px;
     height: 100%;
     background-image: url("../images/city2.jpg");
     background-repeat: no-repeat;
@@ -40,13 +41,12 @@ nav {
     -webkit-box-shadow: 0 2px 15px rgb(245, 245, 245);
 }
 
-
-
 .logo {
     position: relative;
     align-items: center;
     display: flex;
     width: 55%;
+    height: 100%;
 }
 
 .logo-img img {
@@ -66,7 +66,9 @@ nav {
     letter-spacing: 5px;
     color: rgb(245, 245, 245);
     text-transform: uppercase;
-    text-shadow: 2px 2px 2px rgb(110, 75, 255);
+    text-shadow: 3px 3px 3px rgb(110, 75, 255);
+    padding-top: 35px;
+    padding-bottom: 35px;
 }
 
 .nav-links {
@@ -85,7 +87,7 @@ nav {
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: bold;
-    font-size: clamp(1rem, 2.5vh, 1.25rem);
+    font-size: clamp(1rem, 2.5vh, 1.5rem);
     text-shadow: 2px 2px 2px rgb(110, 75, 255);
 }
 
@@ -111,8 +113,9 @@ nav {
         position: fixed;
         bottom: 0;
         left: 0;
-        height: 84.5vh;
+        height: 83.75vh;
         width: 100%;
+        min-height: 400px;
         background-color: rgb(0, 0, 0);
         display: flex;
         flex-direction: column;
@@ -123,7 +126,7 @@ nav {
         border-color: rgb(110, 75, 255);
         border-style: double;
         border-width: 10px;
-        z-index: 9999;
+        z-index: 999;
         overflow: hidden;
     }
 
@@ -137,12 +140,6 @@ nav {
 
     .burger {
         display: block;
-    }
-}
-
-@media screen and (max-height: 550px) and (max-width: 950px) {
-    .nav-links {
-        display: none;
     }
 }
 

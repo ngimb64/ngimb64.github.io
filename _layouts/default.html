@@ -51,6 +51,12 @@
 </div>
 
 <script>
+    $(document).ready(function(){
+        if ($(this).width() <= 700) {
+            $(".logo-img").hide();
+        }
+    });
+
     $(window).on('resize', function(){
         if ($(this).width() <= 700) {
             $(".logo-img").fadeOut(2000);

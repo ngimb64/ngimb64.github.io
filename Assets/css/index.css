@@ -23,6 +23,7 @@
     color: rgb(245, 245, 245);
     background-color: rgba(0, 0, 0, 0.85);
     font-size: clamp(1.5rem, 3vw, 2rem);
+    text-shadow: 3px 3px 3px rgb(110, 75, 255);
     font-weight: bold;
     width: 100%;
     border-style: groove;
