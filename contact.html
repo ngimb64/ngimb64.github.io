@@ -5,21 +5,17 @@ title: Contact
 <link rel="stylesheet" href="Assets/css/index.css">
 <link rel="stylesheet" href="Assets/css/contact.css">
 
-<div class="content">
-    <div class="page-title"><h4>{{ page.title }}</h4></div>
+<div class="page-title"><h4>{{ page.title }}</h4></div>
 
-    <div class="form-box">
-        <form action="https://formspree.io/f/xvoyqbre" method="post">
-            <label for="subject">Subject</label><br>
-            <input type="text" id="subject" name="subject" placeholder="Message subject .."><br><br>
+<div class="form-box">
+    <form action="https://formspree.io/f/xvoyqbre" method="post">
+        <label for="name">Name</label><br>
+        <input type="text" id="name" name="name" placeholder="Your name .."><br><br>
+        <label for="subject">Subject</label><br>
+        <input type="text" id="subject" name="subject" placeholder="Message subject .."><br><br>
 
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" placeholder="Message content .."></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-
-    <script>
-        $(".content").hide().delay(500).fadeIn(2000);
-    </script>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" placeholder="Message content .."></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
 </div>

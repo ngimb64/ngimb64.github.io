@@ -1,10 +1,18 @@
+.content {
+    width: 60%;
+}
+
 .form-box {
     background-color: rgba(0, 0, 0, 0.85);
     border: 5px groove rgb(245, 245, 245);
     padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 input[type=text], textarea {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    min-height: 20px;
     width: 80%;
     padding: 5px;
     border: 2px solid rgb(0, 0, 0);
@@ -28,7 +36,16 @@ input[type=submit]:hover {
 }
 
 textarea {
-    width: 80%;
-    height: 150px;
+    height: 250px;
     min-height: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        width: 80%;
+    }
+
+    input[type=text], textarea {
+        width: 90%;
+    }
 }

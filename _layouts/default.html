@@ -46,11 +46,23 @@
     </nav>
 
     <div class="container-fluid">
-        {{ content }}
+        <div class="content">
+            {{ content }}
+        </div>
+
+        <div class="footer">
+            <footer>
+            </footer>
+        </div>
     </div>
+
+
 </div>
 
 <script>
+    $(".content").hide().delay(500).fadeIn(2000);
+    $(".footer").hide().delay(500).fadeIn(2000);
+
     $(document).ready(function(){
         if ($(this).width() <= 700) {
             $(".logo-img").hide();
