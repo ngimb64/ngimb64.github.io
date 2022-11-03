@@ -1,18 +1,24 @@
 .grid-container {
+    font-size: clamp(1.15rem, 2.5vw, 1.25rem);
+    height: 100%;
+    width: 100%;
     position: relative;
-    background-color: rgba(0, 0, 0, 0.85);
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    background-color: rgba(0, 0, 0, 0.85);
+    grid-template-columns: repeat(4, 1fr);
     border-style: groove;
     border-color: rgb(245, 245, 245);
     border-width: 5px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    padding: 15px;
 }
 
 .grid-cell {
+    margin: 15px;
     background-color: rgba(0, 0, 0, 0.35);
-    min-height: 350px;
+    max-width: 600px;
+    height: fit-content;
     text-align: center;
     border-style: double;
     border-color: rgb(110, 75, 255);
@@ -24,14 +30,42 @@
     -webkit-box-shadow: 0 5px 20px rgb(245, 245, 245);
 }
 
-@media screen and (max-width: 1200px) {
+.cell-image {
+    float: left;
+    height: 50%;
+    width: 100%;
+}
+
+.cell-image img {
+    align-content: center;
+    max-height:100%;
+    max-width: 100%;
+    border-radius: 30px 30px 0 0;
+    object-fit: cover;
+}
+
+.cell-content > h4 {
+    text-shadow: 2px 2px 2px rgb(110, 75, 255);
+}
+
+.cell-content > p {
+    padding: 20px 30px 30px 30px;
+}
+
+@media screen and (max-width: 1500px) {
     .grid-container {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media screen and (max-width: 700px) {
     .grid-container {
-        grid-template-columns: repeat(1, auto);
+        grid-template-columns: repeat(1, 1fr);
     }
 }
