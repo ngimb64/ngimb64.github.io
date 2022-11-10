@@ -1,5 +1,5 @@
 .grid-container {
-    font-size: clamp(1.15rem, 2.5vw, 1.25rem);
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
     height: 100%;
     width: 100%;
     position: relative;
@@ -37,19 +37,19 @@
 }
 
 .cell-image img {
-    align-content: center;
     max-height:100%;
     max-width: 100%;
     border-radius: 30px 30px 0 0;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .cell-content > h4 {
+    padding: 0 25px 0 25px;
     text-shadow: 2px 2px 2px rgb(110, 75, 255);
 }
 
 .cell-content > p {
-    padding: 20px 30px 30px 30px;
+    padding: 20px 25px 25px 25px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -67,5 +67,9 @@
 @media screen and (max-width: 700px) {
     .grid-container {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cell-content > p {
+        padding: 15px;
     }
 }
