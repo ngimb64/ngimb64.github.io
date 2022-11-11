@@ -68,8 +68,6 @@ nav {
     color: rgb(245, 245, 245);
     text-transform: uppercase;
     text-shadow: 3px 3px 3px rgb(110, 75, 255);
-    padding-top: 35px;
-    padding-bottom: 35px;
 }
 
 .nav-links {
@@ -206,5 +204,5 @@ footer {
     border-block-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     min-height: 100px;
-    margin-top: 100px;
+    margin-top: 200px;
 }
