@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -203,6 +203,7 @@ footer {
     border-style: outset;
     border-width: 15px;
     border-color: rgba(0, 0, 0, 0.8);
+    border-block-color: rgba(0, 0, 0, 0.4);
     width: 100%;
     min-height: 100px;
     margin-top: 100px;
