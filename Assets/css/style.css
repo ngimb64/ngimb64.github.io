@@ -60,6 +60,8 @@ nav {
     width: fit-content;
     height: 100%;
     white-space: nowrap;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .logo-name h3 {
@@ -176,7 +178,7 @@ nav {
 
 .content {
     display: table;
-    font-size: clamp(1.25rem, 2vw, 1.50rem);
+    font-size: clamp(1rem, 2.5vw, 1.50rem);
     letter-spacing: 2px;
     color: rgb(245, 245, 245);
     background-color: rgba(110, 75, 255, 0.1);

@@ -7,10 +7,19 @@
 }
 
 .left-box-image {
-    padding-top: 35px;
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.right-box-image {
+    padding-top: 70px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .bottom-box {
+    display: block;
     background-color: rgba(0, 0, 0, 0.85);
     width: 100%;
     float: left;
@@ -20,6 +29,26 @@
     border-radius: 20px;
     padding: 50px 35px 50px 35px;
     overflow-x: hidden;
+}
+
+.bottom-content {
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 35%;
+    float: left;
+    padding-right: 10px;
+}
+
+.bottom-content > p {
+    padding: 275px 0 275px 0;
+    vertical-align: middle;
+}
+
+.img-gallery {
+    display: block;
+    float: left;
+    width: 65%;
 }
 
 @media screen and (max-width: 1100px) {
@@ -39,25 +68,50 @@
         padding-top: 25px;
     }
 
+    .right-box-image {
+        padding-top: 25px;
+    }
+
     .bottom-box {
         padding: 25px 50px 50px 50px;
+    }
+
+    .bottom-content {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .bottom-content > p {
+        padding: 15px;
+    }
+
+    .img-gallery {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 700px) {
     .left-box {
-        padding: 20px;
+        padding: 25px 5px 25px 5px;
     }
 
     .right-box {
-        padding: 25px 15px 25px 15px;
+        padding: 25px 5px 25px 5px;
     }
 
     .left-box-image {
         padding-top: 20px;
     }
 
+    .right-box-image {
+        padding-top: 20px;
+    }
+
     .bottom-box {
-        padding: 20px;
+        padding: 25px 5px 25px 5px;
+    }
+
+    .bottom-content > p {
+        padding: 5px;
     }
 }

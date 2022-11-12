@@ -1,0 +1,17 @@
+.column {
+    width: 16.66%;
+}
+
+.bottom-content > p {
+    padding: 0;
+}
+
+.slide-cell > img {
+    width: 75%;
+}
+
+@media screen and (max-width: 1100px) {
+    .bottom-content > p {
+        padding: 0;
+    }
+}
