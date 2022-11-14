@@ -2,6 +2,11 @@
     width: 16.66%;
 }
 
+.bottom-box {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 .bottom-content > p {
     padding: 0;
 }

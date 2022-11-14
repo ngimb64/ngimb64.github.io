@@ -6,6 +6,7 @@ img {
 
 .img-gallery {
     position: relative;
+    border: 5px groove rgba(110, 75, 255, 0.8);
 }
 
 /* Hide the images by default */
