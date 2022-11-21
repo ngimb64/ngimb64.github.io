@@ -66,7 +66,7 @@
     color: rgb(245, 245, 245);
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
     .left-box {
         padding: 25px 35px 50px 35px;
         width: 100%;
