@@ -105,33 +105,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-.nav-active {
-    transform: translateY(0%);
-}
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-    }
-}
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
-}
-
-.toggle .line2 {
-    opacity: 0;
-}
-
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
-}
-
 .container-fluid {
     color: rgb(245, 245, 245);
     width: 100%;
@@ -163,7 +136,7 @@ nav {
     justify-content: center;
     background-color: rgba(110, 75, 255, 0.8);
     border-style: outset;
-    border-width: 15px;
+    border-width: 10px;
     border-color: rgba(0, 0, 0, 0.8);
     border-block-color: rgba(0, 0, 0, 0.4);
     margin-top: 125px;
@@ -234,4 +207,31 @@ nav {
     .footer-content {
         width: 50%;
     }
+}
+
+.nav-active {
+    transform: translateY(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
 }
