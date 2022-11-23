@@ -27,7 +27,7 @@ nav {
     float: left;
     justify-content: space-around;
     align-items: center;
-    min-height: 120px;
+    min-height: 110px;
     width: 100%;
     min-width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
@@ -65,7 +65,7 @@ nav {
 }
 
 .logo-name h3 {
-    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    font-size: clamp(1.15rem, 2.5vw, 1.5rem);
     letter-spacing: 5px;
     color: rgb(245, 245, 245);
     text-transform: uppercase;
@@ -170,7 +170,7 @@ nav {
         position: fixed;
         bottom: 0;
         left: 0;
-        height: 84%;
+        height: 82%;
         width: 100%;
         background-color: rgb(0, 0, 0);
         display: flex;
