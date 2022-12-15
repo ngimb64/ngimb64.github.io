@@ -1,7 +1,16 @@
 # Webstorm files #
-.idea/*
+.idea/
 
 # Jekyll #
 _site
 .jekyll-metadata
 *-cache/
+
+# Node #
+node_modules/
+public/
+
+# Temp ignore #
+package.json
+package-lock.json
+src/
