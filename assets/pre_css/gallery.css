@@ -15,8 +15,6 @@ img {
 }
 
 .slide-cell > img {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -40,24 +38,18 @@ img {
     color: rgb(245, 245, 245);
     font-weight: bold;
     font-size: clamp(.5rem, 1.5vw, 1rem);
-    -webkit-border-radius: 0 3px 3px 0;
     border-radius: 0 3px 3px 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
 }
 
 .prev {
     left: 0;
-    -webkit-border-radius: 3px 0 0 3px;
     border-radius: 3px 0 0 3px;
 }
 
 /* Position the "next button" to the right */
 .next {
     right: 0;
-    -webkit-border-radius: 3px 0 0 3px;
     border-radius: 3px 0 0 3px;
 }
 
@@ -65,7 +57,6 @@ img {
 .prev:hover, .next:hover {
     background-color: rgba(110, 75, 255, 0.8);
     border-color: white;
-    -webkit-border-radius: 1px;
     border-radius: 1px;
     border-style: solid;
 }
