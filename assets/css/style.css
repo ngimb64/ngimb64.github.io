@@ -50,8 +50,8 @@ nav {
     border-style: double;
     border-width: 10px;
     z-index: 9999;
-    -webkit-box-shadow: 0 10px 20px rgb(245, 245, 245);
-    box-shadow: 0 10px 20px rgb(245, 245, 245);
+    -webkit-box-shadow: 0 5px 20px rgb(245, 245, 245);
+    box-shadow: 0 5px 20px rgb(245, 245, 245);
 }
 
 .logo {
