@@ -26,7 +26,6 @@
     border-style: groove;
     border-color: rgb(245, 245, 245);
     border-width: 5px;
-    -webkit-border-radius: 20px;
     border-radius: 20px;
     padding: 50px 35px 50px 35px;
     overflow-x: hidden;
@@ -61,9 +60,7 @@
     .right-box {
         padding: 25px 50px 50px 50px;
         width: 100%;
-        -webkit-border-top-left-radius: 20px;
         border-top-left-radius: 20px;
-        -webkit-border-top-right-radius: 20px;
         border-top-right-radius: 20px;
     }
 

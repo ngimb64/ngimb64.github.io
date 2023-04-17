@@ -12,11 +12,20 @@ gulp.task('watch', function () {
     gulp.watch('assets/pre_css/*.css', {events: ['add', 'change']}, function () {
         return gulp.src('assets/pre_css/*.css')
             .pipe(autoprefixer({
-                overrideBrowserslist: ['last 99 versions'],
-                cascade: false
+                cascade: false,
+                grid: true
             }))
             .pipe(gulp.dest('assets/css'))
     });
 });
+
+gulp.task('autoprefix', function () {
+    return gulp.src('assets/pre_css/*.css')
+        .pipe(autoprefixer({
+            cascade: false,
+            grid: true
+        }))
+        .pipe(gulp.dest('assets/css'))
+})
 
 //gulp.task('default', gulp.series('check', 'watch'));
