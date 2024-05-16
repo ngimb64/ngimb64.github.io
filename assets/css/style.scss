@@ -5,3 +5,42 @@
 @import "variables";
 @import "bootstrap/scss/bootstrap";
 @import "bootstrap-icons";
+
+
+/*
+Navigation bar
+*/
+#nav-baaa {
+    background-color: #000000;
+}
+
+#nav-baaa .navbar-brand .brand-text,
+#nav-baaa .navbar-nav .nav-link,
+#nav-baaa .navbar-collapse,
+#nav-baaa .navbar-toggler {
+    color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Vertically center the contents */
+}
+
+.brand-text {
+	font-size: 20px;
+    padding: 0 10px; /* Add left and right padding */
+}
+
+@media (max-width: 991.98px) {
+    #navbarSupportedContent {
+        text-align: center;
+    }
+
+    #navbarSupportedContent .navbar-nav {
+        display: inline-block;
+    }
+}

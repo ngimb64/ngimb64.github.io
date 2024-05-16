@@ -1,7 +1,7 @@
 # Site settings
 title: Nick-G Software Development
 description: The official website of Nick-G Software Development.
-baseurl: "/jekyll-bootstrap" # the subpath of your site, e.g. /blog
+baseurl: "/ngimb64.github.io" # the subpath of your site, e.g. /blog
 url: "https://nick-g.dev" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -20,11 +20,15 @@ defaults:
 
 # Exclude
 exclude:
+  - _drafts/
   - assets/js/bootstrap.bundle.min.js
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
-  - LICENSE
+  - LICENSE.md
   - README.md
   - .sass-cache/
   - .jekyll-cache/
+
+# Included plugins
+plugins:
+  - jekyll-redirect-from

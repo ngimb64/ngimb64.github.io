@@ -1,21 +1,7 @@
-{%- assign url = '/' | prepend: site.baseurl | prepend: site.url -%}
-{%- assign title = site.title -%}
-{%- assign description = site.description -%}
+{%- assign url = page.url | default: '/' | prepend: site.baseurl | prepend: site.url -%}
+{%- assign title = page.title | default: site.title -%}
+{%- assign description = page.description | default: site.description -%}
 {%- assign image = '/assets/img/image.jpg' | prepend: site.baseurl | prepend: site.url -%}
-
-{%- if page.url != '/' -%}
-    {%- if page.url -%}
-        {%- assign url = page.url | prepend: site.baseurl | prepend: site.url -%}
-    {%- endif -%}
-
-    {%- if page.title -%}
-        {%- assign title = page.title | append: ' | ' | append: site.title -%}
-    {%- endif -%}
-
-    {%- if page.description -%}
-        {%- assign description = page.description -%}
-    {%- endif -%}
-{%- endif -%}
 
 <!doctype html>
 <html lang="en">
@@ -26,7 +12,7 @@
     <meta name="title" content="{{ title | xml_escape }}">
     <meta name="description" content="{{ description | xml_escape }}">
     <meta name="image" content="{{ image }}">
-    <link rel="shortcut icon" href="{{ '/favicon.ico' | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ '/assets/img/favicon_io/favicon.ico' | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
     <title>{{ title }}</title>
 </head>
@@ -43,7 +29,7 @@
             <p class="m-0"><small>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</small></p>
         </div>
     </footer>
-    
+
     <script src="{{ '/assets/js/bootstrap_launcher.js' | prepend: site.baseurl }}"></script>
 </body>
 
