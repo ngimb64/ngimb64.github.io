@@ -1,9 +1,10 @@
 <nav class="navbar navbar-expand-lg" id="nav-baaa">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{{ site.baseurl }}/#">
-            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" alt="Binary" width="65" height="65" class="d-inline-block align-text-top">
-            <span class="brand-text">Nicholas Gimbel</span>
-            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" alt="Binary" width="65" height="65" class="d-inline-block align-text-top">
+
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" alt="Binary" class="d-inline-block align-text-top">
+            <span class="brand-text">nick-g.dev</span>
+            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" alt="Binary" class="d-inline-block align-text-top">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -12,46 +13,82 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-between align-items-center" id="site-links">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="#">Action</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Another action</a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </li>
-                    </ul>
+                    <a class="nav-link" href="{{ site.baseurl }}/pages/about.html">About</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
+                    <a class="nav-link" href="{{ site.baseurl }}/pages/blog.html">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/pages/projects.html">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ site.baseurl }}/pages/services.html">Services</a>
                 </li>
             </ul>
 
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">
-                    Search
-                </button>
+                <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-
         </div>
+
     </div>
 </nav>
+
+<script>
+    // When the DOM content is loaded, execute the following function
+    document.addEventListener("DOMContentLoaded", function() {
+        const minWindow = 1399;
+        const maxWindow = 1400;
+        const minPadding = 12;
+        const maxPadding = 40;
+        var paddingInterval;
+
+        // Function to gradually adjust padding of navigation items
+        function adjustPadding() {
+            // Select all navigation items
+            var navItems = document.querySelectorAll('.nav-item');
+
+            // Loop through each navigation item
+            navItems.forEach(function(item) {
+                // Get the current computed padding of the item
+                var currentPadding = parseInt(window.getComputedStyle(item).paddingLeft);
+
+                // Increase or decrease the padding based on window size
+                if (window.innerWidth >= maxWindow && currentPadding < maxPadding) {
+                    item.style.paddingLeft = (currentPadding + 1) + 'px';
+                    item.style.paddingRight = (currentPadding + 1) + 'px';
+                } else if (window.innerWidth <= minWindow && currentPadding > minPadding) {
+                    item.style.paddingLeft = (currentPadding - 1) + 'px';
+                    item.style.paddingRight = (currentPadding - 1) + 'px';
+                }
+            });
+        }
+
+        // Function to handle resizing and adjust padding behavior accordingly
+        function adjustPaddingOnResize() {
+            // Clear previous interval, if any
+            clearInterval(paddingInterval);
+
+            // Check window size and start appropriate interval
+            if (window.innerWidth >= maxWindow || window.innerWidth <= minWindow) {
+                paddingInterval = setInterval(adjustPadding, 35);
+            }
+        }
+
+        // Add event listener for resize event to handle resizing of the window
+        window.addEventListener('resize', adjustPaddingOnResize);
+
+        // Initialize padding adjustment on page load
+        adjustPaddingOnResize();
+    });
+</script>

@@ -12,8 +12,8 @@
     <meta name="title" content="{{ title | xml_escape }}">
     <meta name="description" content="{{ description | xml_escape }}">
     <meta name="image" content="{{ image }}">
-    <link rel="shortcut icon" href="{{ '/assets/img/favicon_io/favicon.ico' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
     <title>{{ title }}</title>
 </head>
 
@@ -30,7 +30,7 @@
         </div>
     </footer>
 
-    <script src="{{ '/assets/js/bootstrap_launcher.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ site.baseurl }}/assets/js/bootstrap_launcher.js"></script>
 </body>
 
 </html>

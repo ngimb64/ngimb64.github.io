@@ -16,3 +16,9 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "webrick", "~> 1.8"
 
 gem 'jekyll-redirect-from'
+
+gem "jekyll-include-cache", group: :jekyll_plugins
+
+gem 'faraday', '~> 2.7', '>= 2.7.11'
+
+gem "faraday-retry", "~> 2.2"

@@ -1,8 +1,8 @@
 # Site settings
 title: Nick-G Software Development
 description: The official website of Nick-G Software Development.
-baseurl: "/ngimb64.github.io" # the subpath of your site, e.g. /blog
-url: "https://nick-g.dev" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/ngimb64.github.io"     # the subpath of your site, e.g. /blog
+url: "https://nick-g.dev"         # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -31,4 +31,6 @@ exclude:
 
 # Included plugins
 plugins:
+  - gemfile
+  - jekyll-include-cache
   - jekyll-redirect-from
