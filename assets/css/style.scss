@@ -8,16 +8,22 @@
 
 
 /*
+Misc components
+*/
+.my-d-inline-block {
+    display: inline-block;
+}
+
+
+/*
 Navigation bar
 */
 #nav-baaa {
     background-color: #000000;
 }
 
-#nav-baaa .navbar-brand .brand-text,
-#nav-baaa .navbar-nav .nav-link,
-#nav-baaa .navbar-collapse,
-#nav-baaa .navbar-toggler {
+// Set all the child elements font color
+#nav-baaa * {
     color: #ffffff;
 }
 
@@ -28,19 +34,19 @@ Navigation bar
 
 // Vertically center contents
 .navbar-brand {
-    display: flex;
     align-items: center;
+    display: flex;
 }
 
 .brand-text {
-	font-size: 28px;
-    padding: 0 10px;
+	font-size: 32px;
+    padding: 20px 10px;
 }
 
 // Links default padding
 #site-links .nav-item {
     font-size: 16px;
-    padding: 0 12px
+    padding: 0 10px
 }
 
 // Ensures logo & nav links are centered when burger menu is visible

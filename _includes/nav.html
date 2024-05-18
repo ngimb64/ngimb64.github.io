@@ -2,9 +2,9 @@
     <div class="container-fluid">
 
         <a class="navbar-brand" href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" alt="Binary" class="d-inline-block align-text-top">
-            <span class="brand-text">nick-g.dev</span>
-            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" alt="Binary" class="d-inline-block align-text-top">
+            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" id="logo-1" alt="Binary" class="brand-logo my-d-inline-block align-text-top">
+            <span class="brand-text" id="logo-text">nick-g.dev</span>
+            <img src="{{ site.baseurl }}/assets/img/binary_icon.png" id="logo-2" alt="Binary" class="brand-logo my-d-inline-block align-text-top">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -14,7 +14,7 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 d-flex justify-content-between align-items-center" id="site-links">
-                <li class="nav-item">
+                <li class="nav-item" style="padding-left: 0;">
                     <a class="nav-link" href="{{ site.baseurl }}/">Home</a>
                 </li>
 
@@ -36,7 +36,7 @@
             </ul>
 
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control me-2" name="search-form" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
@@ -44,44 +44,102 @@
     </div>
 </nav>
 
+
+<!-- JS for the spinning logo animation one at a time in a synchronized fashion -->
 <script>
-    // When the DOM content is loaded, execute the following function
+    document.addEventListener("DOMContentLoaded", function() {
+        const logo1 = document.getElementById('logo-1');
+        const logo2 = document.getElementById('logo-2');
+        let currentLogo = logo1;
+        let animationRunning = false; // Flag to track if animation is running
+
+        function spinLogo() {
+            const nextLogo = currentLogo === logo1 ? logo2 : logo1;
+            currentLogo.style.transition = 'transform 1s ease';
+            currentLogo.style.transform = 'rotate(360deg)';
+
+            setTimeout(() => {
+                currentLogo.style.transition = 'none';
+                currentLogo.style.transform = 'rotate(0deg)';
+                currentLogo = nextLogo;
+                // Check if animation should continue running
+                if (animationRunning) {
+                    spinLogo();
+                }
+            }, 1000);
+        }
+
+        // Function to start or stop the animation based on viewport width
+        function handleAnimation() {
+            if (window.innerWidth > 440) {
+                // Start animation if viewport width is greater than 440px
+                animationRunning = true;
+                spinLogo();
+            } else {
+                // Stop animation if viewport width is 440px or less
+                animationRunning = false;
+            }
+        }
+
+        // Call handleAnimation initially to set up the animation based on viewport width
+        handleAnimation();
+
+        // Add event listener for window resize event
+        window.addEventListener('resize', handleAnimation);
+    });
+</script>
+
+
+<!-- JS for dynamically adjusting padding of navigation items based on window size -->
+<script>
     document.addEventListener("DOMContentLoaded", function() {
         const minWindow = 1399;
         const maxWindow = 1400;
-        const minPadding = 12;
-        const maxPadding = 40;
-        var paddingInterval;
+        const minPadding = 10;
+        const maxPadding = 75;
+        let requestId;
 
         // Function to gradually adjust padding of navigation items
         function adjustPadding() {
             // Select all navigation items
-            var navItems = document.querySelectorAll('.nav-item');
+            const navItems = document.querySelectorAll('.nav-item');
 
-            // Loop through each navigation item
+            // Flag to check if any padding adjustment is done
+            let paddingAdjusted = false;
+
             navItems.forEach(function(item) {
-                // Get the current computed padding of the item
-                var currentPadding = parseInt(window.getComputedStyle(item).paddingLeft);
+                // Get the computed padding of the current item
+                const currentPadding = parseInt(window.getComputedStyle(item).paddingRight);
 
-                // Increase or decrease the padding based on window size
+                // If the window width is greater than or equal to the max window
+                // and the current padding is less than the max padding
                 if (window.innerWidth >= maxWindow && currentPadding < maxPadding) {
-                    item.style.paddingLeft = (currentPadding + 1) + 'px';
+                    // Add a pixel of padding
                     item.style.paddingRight = (currentPadding + 1) + 'px';
+                    paddingAdjusted = true;
+                // If the window width is less than or equal to the min window
+                // and the current padding is greater than the min padding
                 } else if (window.innerWidth <= minWindow && currentPadding > minPadding) {
-                    item.style.paddingLeft = (currentPadding - 1) + 'px';
+                    // Subtract a pixel of padding
                     item.style.paddingRight = (currentPadding - 1) + 'px';
+                    paddingAdjusted = true;
                 }
             });
+
+            // If padding was adjusted, request another animation frame
+            if (paddingAdjusted) {
+                requestId = requestAnimationFrame(adjustPadding);
+            }
         }
 
         // Function to handle resizing and adjust padding behavior accordingly
         function adjustPaddingOnResize() {
-            // Clear previous interval, if any
-            clearInterval(paddingInterval);
+            // Cancel previous animation frame request, if any
+            cancelAnimationFrame(requestId);
 
-            // Check window size and start appropriate interval
+            // Check window size and start animation
             if (window.innerWidth >= maxWindow || window.innerWidth <= minWindow) {
-                paddingInterval = setInterval(adjustPadding, 35);
+                requestId = requestAnimationFrame(adjustPadding);
             }
         }
 
@@ -91,4 +149,38 @@
         // Initialize padding adjustment on page load
         adjustPaddingOnResize();
     });
+</script>
+
+
+<!-- JS for fading out and removing logos for devices under 500px of screen width -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function adjustImageVisibility() {
+        var windowWidth = window.innerWidth;
+        var isSmallScreen = windowWidth <= 440;
+
+        // Select all logo images
+        var logoImages = document.querySelectorAll('.brand-logo');
+
+        logoImages.forEach(function(logoImage) {
+            var currentOpacity = parseFloat(window.getComputedStyle(logoImage).opacity);
+
+            if (isSmallScreen && currentOpacity > 0) {
+                Velocity(logoImage, { opacity: 0 }, { duration: 1, complete: function() {
+                    logoImage.style.display = 'none'; // Hide the elements after fading out
+                }});
+            } else if (!isSmallScreen && currentOpacity < 1) {
+                Velocity(logoImage, { opacity: 1 }, { duration: 1, complete: function() {
+                    logoImage.style.display = 'inline-block'; // Show the elements after fading in
+                }});
+            }
+        });
+    }
+
+    // Call adjustImageVisibility function on page load
+    adjustImageVisibility();
+
+    // Call adjustImageVisibility function on window resize
+    window.addEventListener('resize', adjustImageVisibility);
+});
 </script>
