@@ -1,15 +1,11 @@
 # Site settings
 title: Nick-G Software Development
 description: The official website of Nick-G Software Development.
-baseurl: "/ngimb64.github.io"     # the subpath of your site, e.g. /blog
-url: "https://nick-g.dev"         # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://nick-g.dev"
 
 # Build settings
 markdown: kramdown
-
-# SASS
-sass:
-  style: :compressed
 
 # Defaults
 defaults:
@@ -21,16 +17,22 @@ defaults:
 # Exclude
 exclude:
   - _drafts/
-  - assets/js/bootstrap.bundle.min.js
+  - .git
+  - .gitignore
   - Gemfile
   - Gemfile.lock
   - LICENSE.md
+  - node_modules/
   - README.md
   - .sass-cache/
   - .jekyll-cache/
 
 # Included plugins
 plugins:
-  - gemfile
   - jekyll-include-cache
+  - jekyll-postcss
   - jekyll-redirect-from
+
+# Automatic rebuilding on fly
+postcss:
+  cache: false

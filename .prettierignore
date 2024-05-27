@@ -1,0 +1,13 @@
+_layouts/default.html
+_posts/
+node_modules/
+_config.yml
+src/img/
+src/js/
+.prettierrc.json
+Gemfile
+LICENSE.md
+package-lock.json
+package.json
+README.md
+robots.txt

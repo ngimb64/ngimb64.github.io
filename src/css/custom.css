@@ -1,0 +1,58 @@
+---
+layout: null
+---
+
+@import url(./tailwind.css);
+
+/*
+Misc components
+*/
+.my-d-inline-block {
+    display: inline-block;
+}
+
+/*
+Navigation bar
+*/
+#nav-baaa {
+    background-color: #000000;
+}
+
+/* Set all the child elements font color */
+#nav-baaa * {
+    color: #ffffff;
+}
+
+/* Set burger icon white */
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Vertically center contents */
+.navbar-brand {
+    align-items: center;
+    display: flex;
+}
+
+/* Set the logo font */
+.brand-text {
+    font-size: 32px;
+    padding: 20px 10px;
+}
+
+/* Links default padding */
+#site-links .nav-item {
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+/* Ensures logo & nav links are centered when burger menu is visible */
+@media (max-width: 991.98px) {
+    #navbarSupportedContent .navbar-nav {
+        display: inline-block;
+    }
+
+    #navbarSupportedContent {
+        text-align: center;
+    }
+}

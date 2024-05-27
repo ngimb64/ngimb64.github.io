@@ -1,0 +1,30 @@
+{
+  "name": "ngimb64.github.io",
+  "version": "1.0.0",
+  "description": "![Jekyll](https://img.shields.io/badge/Jekyll-v3.9.0-red.svg)\r ![Bootstrap](https://img.shields.io/badge/Bootstrap-v5.0.0--beta1-blueviolet)\r ![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-v1.2.0-blueviolet)",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngimb64/ngimb64.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ngimb64/ngimb64.github.io/issues"
+  },
+  "homepage": "https://github.com/ngimb64/ngimb64.github.io#readme",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "autoprefixer": "^10.4.19",
+    "caniuse-lite": "^1.0.30001621",
+    "daisyui": "^4.11.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-cli": "^0.1.2"
+  }
+}

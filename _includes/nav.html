@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg" id="nav-baaa">
+<!-- <nav class="navbar navbar-expand-lg" id="nav-baaa">
     <div class="container-fluid">
 
         <a class="navbar-brand" href="{{ site.baseurl }}/">
@@ -42,145 +42,267 @@
         </div>
 
     </div>
-</nav>
+</nav> -->
 
+<nav class="bg-black shadow-lg" id="nav-baaa">
+    <div class="container mx-auto flex items-center justify-between px-4 py-2">
+        <a
+            class="navbar-brand flex items-center"
+            href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
+        >
+            <img
+                src="{{ relative_url }}/src/img/binary_icon.png"
+                id="logo-1"
+                alt="Binary"
+                class="brand-logo my-d-inline-block align-text-top"
+            />
+            <span class="brand-text text-lg font-semibold">nick-g.dev</span>
+            <img
+                src="{{ relative_url }}/src/img/binary_icon.png"
+                id="logo-2"
+                alt="Binary"
+                class="brand-logo my-d-inline-block align-text-top"
+            />
+        </a>
+
+        <button
+            class="block text-gray-800 focus:outline-none md:hidden"
+            id="mobile-menu-toggle"
+        >
+            <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+            </svg>
+        </button>
+
+        <div
+            class="md:flex md:items-center md:space-x-4"
+            id="navbarSupportedContent"
+        >
+            <ul class="flex items-center space-x-4">
+                <li class="nav-item">
+                    <a
+                        href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
+                        class="font-semibold text-gray-800"
+                        >Home</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="{{ relative_url }}/pages/about.html"
+                        class="font-semibold text-gray-800"
+                        >About</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="{{ relative_url }}/pages/blog.html"
+                        class="font-semibold text-gray-800"
+                        >Blog</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="{{ relative_url }}/pages/projects.html"
+                        class="font-semibold text-gray-800"
+                        >Projects</a
+                    >
+                </li>
+                <li class="nav-item">
+                    <a
+                        href="{{ relative_url }}/pages/services.html"
+                        class="font-semibold text-gray-800"
+                        >Services</a
+                    >
+                </li>
+            </ul>
+
+            <form class="hidden md:flex">
+                <input
+                    class="form-input w-48 rounded-l-md"
+                    name="search-form"
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                />
+                <button class="btn btn-primary rounded-r-md" type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+    </div>
+</nav>
 
 <!-- JS for the spinning logo animation one at a time in a synchronized fashion -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const logo1 = document.getElementById('logo-1');
-        const logo2 = document.getElementById('logo-2');
-        let currentLogo = logo1;
-        let animationRunning = false; // Flag to track if animation is running
+    document.addEventListener('DOMContentLoaded', function () {
+        const logo1 = document.getElementById('logo-1')
+        const logo2 = document.getElementById('logo-2')
+        let currentLogo = logo1
+        let animationRunning = false // Flag to track if animation is running
 
         function spinLogo() {
-            const nextLogo = currentLogo === logo1 ? logo2 : logo1;
-            currentLogo.style.transition = 'transform 1s ease';
-            currentLogo.style.transform = 'rotate(360deg)';
+            const nextLogo = currentLogo === logo1 ? logo2 : logo1
+            currentLogo.style.transition = 'transform 1s ease'
+            currentLogo.style.transform = 'rotate(360deg)'
 
             setTimeout(() => {
-                currentLogo.style.transition = 'none';
-                currentLogo.style.transform = 'rotate(0deg)';
-                currentLogo = nextLogo;
+                currentLogo.style.transition = 'none'
+                currentLogo.style.transform = 'rotate(0deg)'
+                currentLogo = nextLogo
                 // Check if animation should continue running
                 if (animationRunning) {
-                    spinLogo();
+                    spinLogo()
                 }
-            }, 1000);
+            }, 1000)
         }
 
         // Function to start or stop the animation based on viewport width
         function handleAnimation() {
             if (window.innerWidth > 440) {
                 // Start animation if viewport width is greater than 440px
-                animationRunning = true;
-                spinLogo();
+                animationRunning = true
+                spinLogo()
             } else {
                 // Stop animation if viewport width is 440px or less
-                animationRunning = false;
+                animationRunning = false
             }
         }
 
         // Call handleAnimation initially to set up the animation based on viewport width
-        handleAnimation();
+        handleAnimation()
 
         // Add event listener for window resize event
-        window.addEventListener('resize', handleAnimation);
-    });
+        window.addEventListener('resize', handleAnimation)
+    })
 </script>
-
 
 <!-- JS for dynamically adjusting padding of navigation items based on window size -->
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const minWindow = 1399;
-        const maxWindow = 1400;
-        const minPadding = 10;
-        const maxPadding = 75;
-        let requestId;
+    document.addEventListener('DOMContentLoaded', function () {
+        const minWindow = 1399
+        const maxWindow = 1400
+        const minPadding = 10
+        const maxPadding = 75
+        let requestId
 
         // Function to gradually adjust padding of navigation items
         function adjustPadding() {
             // Select all navigation items
-            const navItems = document.querySelectorAll('.nav-item');
+            const navItems = document.querySelectorAll('.nav-item')
 
             // Flag to check if any padding adjustment is done
-            let paddingAdjusted = false;
+            let paddingAdjusted = false
 
-            navItems.forEach(function(item) {
+            navItems.forEach(function (item) {
                 // Get the computed padding of the current item
-                const currentPadding = parseInt(window.getComputedStyle(item).paddingRight);
+                const currentPadding = parseInt(
+                    window.getComputedStyle(item).paddingRight
+                )
 
                 // If the window width is greater than or equal to the max window
                 // and the current padding is less than the max padding
-                if (window.innerWidth >= maxWindow && currentPadding < maxPadding) {
+                if (
+                    window.innerWidth >= maxWindow &&
+                    currentPadding < maxPadding
+                ) {
                     // Add a pixel of padding
-                    item.style.paddingRight = (currentPadding + 1) + 'px';
-                    paddingAdjusted = true;
-                // If the window width is less than or equal to the min window
-                // and the current padding is greater than the min padding
-                } else if (window.innerWidth <= minWindow && currentPadding > minPadding) {
+                    item.style.paddingRight = currentPadding + 1 + 'px'
+                    paddingAdjusted = true
+                    // If the window width is less than or equal to the min window
+                    // and the current padding is greater than the min padding
+                } else if (
+                    window.innerWidth <= minWindow &&
+                    currentPadding > minPadding
+                ) {
                     // Subtract a pixel of padding
-                    item.style.paddingRight = (currentPadding - 1) + 'px';
-                    paddingAdjusted = true;
+                    item.style.paddingRight = currentPadding - 1 + 'px'
+                    paddingAdjusted = true
                 }
-            });
+            })
 
             // If padding was adjusted, request another animation frame
             if (paddingAdjusted) {
-                requestId = requestAnimationFrame(adjustPadding);
+                requestId = requestAnimationFrame(adjustPadding)
             }
         }
 
         // Function to handle resizing and adjust padding behavior accordingly
         function adjustPaddingOnResize() {
             // Cancel previous animation frame request, if any
-            cancelAnimationFrame(requestId);
+            cancelAnimationFrame(requestId)
 
             // Check window size and start animation
-            if (window.innerWidth >= maxWindow || window.innerWidth <= minWindow) {
-                requestId = requestAnimationFrame(adjustPadding);
+            if (
+                window.innerWidth >= maxWindow ||
+                window.innerWidth <= minWindow
+            ) {
+                requestId = requestAnimationFrame(adjustPadding)
             }
         }
 
         // Add event listener for resize event to handle resizing of the window
-        window.addEventListener('resize', adjustPaddingOnResize);
+        window.addEventListener('resize', adjustPaddingOnResize)
 
         // Initialize padding adjustment on page load
-        adjustPaddingOnResize();
-    });
+        adjustPaddingOnResize()
+    })
 </script>
-
 
 <!-- JS for fading out and removing logos for devices under 500px of screen width -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    function adjustImageVisibility() {
-        var windowWidth = window.innerWidth;
-        var isSmallScreen = windowWidth <= 440;
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to adjust visibility of logo images based on window width
+        function adjustImageVisibility() {
+            var windowWidth = window.innerWidth
+            var isSmallScreen = windowWidth <= 440
 
-        // Select all logo images
-        var logoImages = document.querySelectorAll('.brand-logo');
+            // Select all logo images
+            var logoImages = document.querySelectorAll('.brand-logo')
 
-        logoImages.forEach(function(logoImage) {
-            var currentOpacity = parseFloat(window.getComputedStyle(logoImage).opacity);
+            // Iterate over each logo image
+            logoImages.forEach(function (logoImage) {
+                // Get the current opacity of the logo image
+                var currentOpacity = parseFloat(
+                    window.getComputedStyle(logoImage).opacity
+                )
 
-            if (isSmallScreen && currentOpacity > 0) {
-                Velocity(logoImage, { opacity: 0 }, { duration: 1, complete: function() {
-                    logoImage.style.display = 'none'; // Hide the elements after fading out
-                }});
-            } else if (!isSmallScreen && currentOpacity < 1) {
-                Velocity(logoImage, { opacity: 1 }, { duration: 1, complete: function() {
-                    logoImage.style.display = 'inline-block'; // Show the elements after fading in
-                }});
-            }
-        });
-    }
+                // If it's a small screen and the logo is visible
+                if (isSmallScreen && currentOpacity > 0) {
+                    // Fade out the logo using GSAP animation
+                    gsap.to(logoImage, {
+                        opacity: 0,
+                        duration: 0.5,
+                        onComplete: function () {
+                            // Once animation is complete, hide the logo
+                            logoImage.style.display = 'none'
+                        },
+                    })
+                    // If it's not a small screen and the logo is hidden
+                } else if (!isSmallScreen && currentOpacity < 1) {
+                    // Show the logo
+                    logoImage.style.display = 'inline-block'
+                    // Fade in the logo using GSAP animation
+                    gsap.to(logoImage, { opacity: 1, duration: 0.5 })
+                }
+            })
+        }
 
-    // Call adjustImageVisibility function on page load
-    adjustImageVisibility();
+        // Call the adjustImageVisibility function initially
+        adjustImageVisibility()
 
-    // Call adjustImageVisibility function on window resize
-    window.addEventListener('resize', adjustImageVisibility);
-});
+        // Add event listener for window resize event
+        window.addEventListener('resize', adjustImageVisibility)
+    })
 </script>
