@@ -2,13 +2,12 @@ source "https://rubygems.org"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-	gem "github-pages"
-	gem "jekyll-include-cache"
-	gem "jekyll-redirect-from"
+	gem "jekyll-include-cache", "~> 0.2.1"
+	gem "github-pages", "~> 231"
+	gem "jekyll-redirect-from", "~> 0.16.0"
 end
 
-gem "jekyll"
-gem 'jekyll-postcss'
+gem "jekyll", "~> 3.9.5"
 gem 'faraday', '~> 2.7', '>= 2.7.11'
 gem "faraday-retry", "~> 2.2"
 gem "webrick", "~> 1.8"

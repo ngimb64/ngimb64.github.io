@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    mode: 'jit',
     content: [
         './_includes/*.{html,js}',
         './_layouts/*.{html,js}',
@@ -11,5 +12,5 @@ module.exports = {
     theme: {
         extend: {},
     },
-    plugins: [require('daisyui'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/typography'), require('daisyui')],
 }

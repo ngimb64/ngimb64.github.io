@@ -18,6 +18,9 @@ First, install [Jekyll](https://jekyllrb.com/docs/).
 
 Then ensure Tailwind CSS and daisyUI & Prettier plugins are installed:
 
+Dev dependencies should be easily installable with:
+`npm install`
+
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
 - [daisyUI](https://daisyui.com/docs/install/)
 - [Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)

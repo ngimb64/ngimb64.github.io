@@ -30,9 +30,4 @@ exclude:
 # Included plugins
 plugins:
   - jekyll-include-cache
-  - jekyll-postcss
   - jekyll-redirect-from
-
-# Automatic rebuilding on fly
-postcss:
-  cache: false
