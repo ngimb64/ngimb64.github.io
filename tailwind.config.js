@@ -9,6 +9,7 @@ module.exports = {
         './*.html',
         './src/js/*.js',
     ],
+    darkMode: 'class',
     theme: {
         extend: {},
     },

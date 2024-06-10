@@ -1,4 +1,5 @@
-<nav class="navbar min-h-20">
+<nav class="navbar fixed top-0 min-h-20 bg-stone-200 dark:bg-slate-950">
+    <!-- Logo -->
     <div class="navbar-start flex items-center">
         <a
             class="navbar-brand flex items-center"
@@ -12,7 +13,7 @@
                 class="brand-logo xl:max-h-13 xl:max-w-13 max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
             />
             <span
-                class="whitespace-nowrap px-2 text-xl font-semibold lg:text-2xl xl:text-3xl"
+                class="whitespace-nowrap px-2 text-2xl font-semibold text-neutral-950 xl:text-3xl 2xl:text-4xl dark:text-lime-600"
                 >nick-g.dev</span
             >
             <img
@@ -26,42 +27,41 @@
 
     <!-- Navbar Links -->
     <div
-        class="navbar-center m-auto hidden items-center lg:flex"
-        id="navbarSupportedContent"
+        class="navbar-center m-auto hidden items-center text-neutral-950 lg:flex dark:text-lime-600"
     >
         <ul class="menu menu-horizontal flex space-x-4 text-lg">
             <li class="nav-item">
                 <a
                     href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
-                    class="font-semibold text-gray-800"
+                    class="font-semibold"
                     >Home</a
                 >
             </li>
             <li class="nav-item">
                 <a
                     href="{{ relative_url }}/pages/about.html"
-                    class="font-semibold text-gray-800"
+                    class="font-semibold"
                     >About</a
                 >
             </li>
             <li class="nav-item">
                 <a
                     href="{{ relative_url }}/pages/blog.html"
-                    class="font-semibold text-gray-800"
+                    class="font-semibold"
                     >Blog</a
                 >
             </li>
             <li class="nav-item">
                 <a
                     href="{{ relative_url }}/pages/projects.html"
-                    class="font-semibold text-gray-800"
+                    class="font-semibold"
                     >Projects</a
                 >
             </li>
             <li class="nav-item">
                 <a
                     href="{{ relative_url }}/pages/services.html"
-                    class="font-semibold text-gray-800"
+                    class="font-semibold"
                     >Services</a
                 >
             </li>
@@ -69,28 +69,46 @@
     </div>
 
     <div class="navbar-end flex items-center">
-        <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-menu pr-4 lg:hidden" id="mobile-menu-toggle">
+        <label class="btn btn-circle swap swap-rotate mr-4 lg:hidden">
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" />
+
+            <!-- hamburger icon -->
             <svg
-                class="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+                class="swap-off fill-current"
                 xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
             >
                 <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h16M4 18h16"
-                ></path>
+                    d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                />
             </svg>
-        </button>
+
+            <!-- close icon -->
+            <svg
+                class="swap-on fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+            >
+                <polygon
+                    points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+                />
+            </svg>
+        </label>
 
         <!-- Light/Dark toggle -->
-        <label class="swap swap-rotate pr-6">
+        <label class="btn btn-circle swap swap-rotate mr-6">
             <!-- this hidden checkbox controls the state -->
-            <input type="checkbox" class="theme-controller" value="synthwave" />
+            <input
+                id="theme-toggle"
+                type="checkbox"
+                class="theme-controller"
+                value="synthwave"
+            />
 
             <!-- sun icon -->
             <svg

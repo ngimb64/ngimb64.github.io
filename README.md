@@ -29,7 +29,7 @@ Dev dependencies should be easily installable with:
 In a separate terminal window, run this command in project root directory to
 ensure tailwind generates CSS based in implemneted classes in HTML and JS:
 
-`npx tailwindcss -i ./src/css/input.css -o ./src/css/tailwind.css --autoprefixer --watch`
+`npx tailwindcss -i ./src/css/input.css -o ./src/css/tailwind.css --autoprefixer --minify --watch`
 
 Then run these commmands in the main window in projet root directory:
 
