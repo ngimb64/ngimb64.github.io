@@ -1,4 +1,4 @@
-<nav class="navbar fixed top-0 min-h-20 bg-stone-200 dark:bg-slate-950">
+<nav class="navbar fixed top-0 min-h-20 bg-stone-300 dark:bg-slate-950">
     <!-- Logo -->
     <div class="navbar-start flex items-center">
         <a
@@ -13,7 +13,7 @@
                 class="brand-logo xl:max-h-13 xl:max-w-13 max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
             />
             <span
-                class="whitespace-nowrap px-2 text-2xl font-semibold text-neutral-950 xl:text-3xl 2xl:text-4xl dark:text-lime-600"
+                class="whitespace-nowrap px-2 text-3xl font-semibold text-neutral-950 dark:text-lime-500 2xl:text-4xl"
                 >nick-g.dev</span
             >
             <img
@@ -27,49 +27,34 @@
 
     <!-- Navbar Links -->
     <div
-        class="navbar-center m-auto hidden items-center text-neutral-950 lg:flex dark:text-lime-600"
+        class="navbar-center m-auto hidden items-center font-semibold text-neutral-950 dark:text-lime-500 lg:flex"
     >
-        <ul class="menu menu-horizontal flex space-x-4 text-lg">
+        <ul
+            class="menu menu-horizontal flex space-x-4 text-lg xl:text-xl 2xl:text-2xl"
+        >
             <li class="nav-item">
                 <a
                     href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
-                    class="font-semibold"
                     >Home</a
                 >
             </li>
             <li class="nav-item">
-                <a
-                    href="{{ relative_url }}/pages/about.html"
-                    class="font-semibold"
-                    >About</a
-                >
+                <a href="{{ relative_url }}/pages/about.html">About</a>
             </li>
             <li class="nav-item">
-                <a
-                    href="{{ relative_url }}/pages/blog.html"
-                    class="font-semibold"
-                    >Blog</a
-                >
+                <a href="{{ relative_url }}/pages/blog.html">Blog</a>
             </li>
             <li class="nav-item">
-                <a
-                    href="{{ relative_url }}/pages/projects.html"
-                    class="font-semibold"
-                    >Projects</a
-                >
+                <a href="{{ relative_url }}/pages/projects.html">Projects</a>
             </li>
             <li class="nav-item">
-                <a
-                    href="{{ relative_url }}/pages/services.html"
-                    class="font-semibold"
-                    >Services</a
-                >
+                <a href="{{ relative_url }}/pages/services.html">Services</a>
             </li>
         </ul>
     </div>
 
     <div class="navbar-end flex items-center">
-        <label class="btn btn-circle swap swap-rotate mr-4 lg:hidden">
+        <label class="btn btn-circle swap swap-rotate mr-2 sm:mr-4 lg:hidden">
             <!-- this hidden checkbox controls the state -->
             <input type="checkbox" />
 
@@ -101,7 +86,7 @@
         </label>
 
         <!-- Light/Dark toggle -->
-        <label class="btn btn-circle swap swap-rotate mr-6">
+        <label class="btn btn-circle swap swap-rotate sm:mr-6">
             <!-- this hidden checkbox controls the state -->
             <input
                 id="theme-toggle"
@@ -284,7 +269,7 @@
                     // Fade out the logo using GSAP animation
                     gsap.to(logoImage, {
                         opacity: 0,
-                        duration: 0.5,
+                        duration: 0.1,
                         onComplete: function () {
                             // Once animation is complete, hide the logo
                             logoImage.style.display = 'none'
