@@ -1,26 +1,23 @@
-<nav class="navbar fixed top-0 min-h-20 bg-stone-300 dark:bg-slate-950">
+<nav
+    class="navbar fixed top-0 min-h-24 border-b-2 border-l-2 border-r-2 border-neutral-950 bg-stone-300 shadow-lg dark:border-yellow-300 dark:bg-neutral-950 dark:shadow-lime-500"
+>
     <!-- Logo -->
-    <div class="navbar-start flex items-center">
-        <a
-            class="navbar-brand flex items-center"
-            href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
-            tabindex="-1"
-        >
+    <div class="navbar-start flex items-center sm:ml-6">
+        <a class="navbar-brand flex items-center" tabindex="-1">
             <img
                 src="{{ relative_url }}/src/img/binary_icon.png"
                 id="logo-1"
-                alt="Binary"
-                class="brand-logo xl:max-h-13 xl:max-w-13 max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
+                class="brand-logo max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
             />
             <span
+                id="logo-text"
                 class="whitespace-nowrap px-2 text-3xl font-semibold text-neutral-950 dark:text-lime-500 2xl:text-4xl"
                 >nick-g.dev</span
             >
             <img
                 src="{{ relative_url }}/src/img/binary_icon.png"
                 id="logo-2"
-                alt="Binary"
-                class="brand-logo xl:max-h-13 xl:max-w-13 max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
+                class="brand-logo max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
             />
         </a>
     </div>
@@ -35,24 +32,42 @@
             <li class="nav-item">
                 <a
                     href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
+                    class="dark:hover:bg-stone-500"
                     >Home</a
                 >
             </li>
             <li class="nav-item">
-                <a href="{{ relative_url }}/pages/about.html">About</a>
+                <a
+                    href="{{ relative_url }}/pages/about.html"
+                    class="dark:hover:bg-stone-500"
+                    >About</a
+                >
             </li>
             <li class="nav-item">
-                <a href="{{ relative_url }}/pages/blog.html">Blog</a>
+                <a
+                    href="{{ relative_url }}/pages/blog.html"
+                    class="dark:hover:bg-stone-500"
+                    >Blog</a
+                >
             </li>
             <li class="nav-item">
-                <a href="{{ relative_url }}/pages/projects.html">Projects</a>
+                <a
+                    href="{{ relative_url }}/pages/projects.html"
+                    class="dark:hover:bg-stone-500"
+                    >Projects</a
+                >
             </li>
             <li class="nav-item">
-                <a href="{{ relative_url }}/pages/services.html">Services</a>
+                <a
+                    href="{{ relative_url }}/pages/services.html"
+                    class="dark:hover:bg-stone-500"
+                    >Services</a
+                >
             </li>
         </ul>
     </div>
 
+    <!-- End section on far right with toggles-->
     <div class="navbar-end flex items-center">
         <label class="btn btn-circle swap swap-rotate mr-2 sm:mr-4 lg:hidden">
             <!-- this hidden checkbox controls the state -->
