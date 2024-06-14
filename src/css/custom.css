@@ -62,8 +62,8 @@ Hero Section
     #hero-section {
         border-top-left-radius: 9999px;
         border-top-right-radius: 9999px;
-        border-bottom-left-radius: 500px;
-        border-bottom-right-radius: 500px;
+        border-bottom-left-radius: 1000px;
+        border-bottom-right-radius: 1000px;
     }
 }
 
@@ -78,8 +78,7 @@ Body Content
         2px 2px 0 white;
 }
 
-.dark .header-shadow-light,
-.dark #content {
+.dark .header-shadow-light {
     text-shadow:
         1px 1px 0 black,
         1px 1px 0 black,
