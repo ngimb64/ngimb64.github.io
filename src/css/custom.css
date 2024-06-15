@@ -58,10 +58,10 @@ Hero Section
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
     #hero-section {
-        border-top-left-radius: 9999px;
-        border-top-right-radius: 9999px;
+        border-top-left-radius: 5000px;
+        border-top-right-radius: 5000px;
         border-bottom-left-radius: 1000px;
         border-bottom-right-radius: 1000px;
     }

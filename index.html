@@ -4,63 +4,53 @@ title: nick-g.dev || Home
 
 <div
     id="content"
-    class="container mx-auto py-16 text-neutral-950 dark:text-gray-300"
+    class="container mx-auto py-14 text-neutral-950 dark:text-gray-300"
 >
     <!-- Add space -->
     <div class="h-12"></div>
 
-    <!-- Hero Section-->
+    <!-- Hero Section -->
     <div
         id="hero-section"
-        class="flex-col items-center justify-center bg-gray-300 px-12 py-16 align-middle shadow-lg dark:bg-stone-500 dark:shadow-lime-500 sm:px-28 md:px-40 lg:flex-row lg:px-52"
+        class="bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500 sm:px-28 md:px-40 lg:px-52"
     >
+        <!-- Header -->
         <h1
-            class="header-shadow-light w-full text-center text-lg font-bold sm:text-xl lg:text-2xl 2xl:text-3xl"
+            class="header-shadow-light mb-0 px-10 pb-8 pt-10 text-center text-lg font-bold sm:text-xl lg:text-2xl 2xl:text-3xl"
         >
             Voluptate dignissimos quia nisi sequi suscipit porro earum, officiis
             voluptate delectus nisi hic fugit vel
         </h1>
 
-        <div class="h-12"></div>
+        <!-- Horizontal Split for Image and Paragraph -->
+        <div class="flex flex-col items-center justify-center lg:flex-row">
+            <!-- Image Container -->
+            <div
+                class="lg mb-6 flex h-80 max-h-80 min-h-0 w-80 min-w-0 max-w-80 justify-center object-contain px-6 lg:w-1/2"
+            >
+                <img
+                    src="{{ relative_url }}/src/img/Logo_500x500.png"
+                    class="h-full w-full rounded-badge"
+                    alt="Logo Image"
+                />
+            </div>
 
-        <p
-            class="text-md w-full text-center font-semibold sm:text-lg lg:text-xl 2xl:text-2xl"
-        >
-            Voluptate dignissimos quia nisi sequi suscipit porro earum, officiis
-            voluptate delectus nisi hic fugit vel, ad quasi delectus et quas
-            maxime ratione tenetur rerum? Sint ipsum delectus, expedita
-            necessitatibus cum ratione vitae, sapiente tempore veniam ad ratione
-            ipsum iste voluptatem cum non praesentium?
-        </p>
+            <!-- Paragraph Container -->
+            <div class="w-full px-8 pb-10 lg:w-1/2 lg:px-12">
+                <p
+                    class="text-md text-center font-semibold sm:text-lg lg:text-left lg:text-xl 2xl:text-2xl"
+                >
+                    Voluptate dignissimos quia nisi sequi suscipit porro earum,
+                    officiis voluptate delectus nisi hic fugit vel, ad quasi
+                    delectus et quas maxime ratione tenetur rerum? Sint ipsum
+                    delectus, expedita necessitatibus cum ratione vitae,
+                    sapiente tempore veniam ad ratione ipsum iste voluptatem cum
+                    non praesentium?
+                </p>
+            </div>
+        </div>
     </div>
 
     <!-- Add space -->
     <div class="h-12"></div>
 </div>
-
-<!-- <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-        <div class="rounded-lg bg-white p-5 shadow-md">
-            <h2 class="mb-2 text-xl font-semibold text-gray-900">About Me</h2>
-            <p class="text-gray-799">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et
-                diam nec mi interdum ultrices.
-            </p>
-        </div>
-
-        <div class="rounded-lg bg-white p-5 shadow-md">
-            <h2 class="mb-2 text-xl font-semibold text-gray-900">
-                Latest Blog Posts
-            </h2>
-            <ul>
-                <li class="mb-1">
-                    <a href="#" class="text-blue-500 hover:underline">Post 1</a>
-                </li>
-                <li class="mb-1">
-                    <a href="#" class="text-blue-500 hover:underline">Post 2</a>
-                </li>
-                <li class="mb-1">
-                    <a href="#" class="text-blue-500 hover:underline">Post 3</a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
