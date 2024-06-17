@@ -39,6 +39,10 @@ Nav Bar
     text-shadow: 1px 1px 2px rgb(255, 255, 0);
 }
 
+#dropdown-menu {
+    top: 4.75rem;
+}
+
 /*
 Hero Section
 */
