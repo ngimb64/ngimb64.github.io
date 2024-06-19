@@ -90,6 +90,10 @@ Body Content
         2px 2px 0 black;
 }
 
+.rounded-content {
+    border-radius: 50px;
+}
+
 /*
 Footer
 */

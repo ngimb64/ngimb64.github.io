@@ -2,7 +2,7 @@
     class="navbar fixed left-0 top-0 max-h-8 border-b-2 border-l-2 border-r-2 border-neutral-950 bg-stone-300 align-middle shadow-lg dark:border-yellow-300 dark:bg-neutral-950 dark:shadow-lime-500"
 >
     <!-- Logo -->
-    <div class="navbar-start ml-2 flex items-center sm:ml-6">
+    <div class="navbar-start ml-2 mr-2 flex items-center sm:ml-6">
         <a class="navbar-brand flex items-center" tabindex="-1">
             <img
                 src="{{ relative_url }}/src/img/binary_icon.png"
@@ -24,43 +24,41 @@
 
     <!-- Navbar Links -->
     <div
-        class="navbar-center mx-auto hidden items-center font-semibold text-neutral-950 dark:text-lime-500 lg:flex"
+        class="navbar-center hidden items-center text-center font-semibold text-neutral-950 dark:text-lime-500 lg:flex"
     >
-        <ul
-            class="menu menu-horizontal flex space-x-4 text-lg xl:text-xl 2xl:text-2xl"
-        >
-            <li class="nav-item">
+        <ul class="menu menu-horizontal flex text-lg xl:text-xl 2xl:text-2xl">
+            <li class="nav-item xl:px-2 2xl:px-6">
                 <a
                     href="{% if site.baseurl != '' %}{{ site.baseurl }}{% endif %}/"
-                    class="dark:hover:bg-stone-500"
+                    class="text-center dark:hover:bg-stone-500"
                     >Home</a
                 >
             </li>
-            <li class="nav-item">
+            <li class="nav-item xl:px-2 2xl:px-6">
                 <a
                     href="{{ relative_url }}/pages/about.html"
-                    class="dark:hover:bg-stone-500"
+                    class="text-center dark:hover:bg-stone-500"
                     >About</a
                 >
             </li>
-            <li class="nav-item">
+            <li class="nav-item xl:px-2 2xl:px-6">
                 <a
                     href="{{ relative_url }}/pages/blog.html"
-                    class="dark:hover:bg-stone-500"
+                    class="text-center dark:hover:bg-stone-500"
                     >Blog</a
                 >
             </li>
-            <li class="nav-item">
+            <li class="nav-item xl:px-2 2xl:px-6">
                 <a
                     href="{{ relative_url }}/pages/projects.html"
-                    class="dark:hover:bg-stone-500"
+                    class="text-center dark:hover:bg-stone-500"
                     >Projects</a
                 >
             </li>
-            <li class="nav-item">
+            <li class="nav-item xl:px-2 2xl:px-6">
                 <a
                     href="{{ relative_url }}/pages/services.html"
-                    class="dark:hover:bg-stone-500"
+                    class="text-center dark:hover:bg-stone-500"
                     >Services</a
                 >
             </li>
@@ -235,87 +233,6 @@
 
         // Add event listener for window resize event
         window.addEventListener('resize', handleAnimation)
-    })
-</script>
-
-<!-- JS for dynamically adjusting padding of navigation items based on window size -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const minWindow = 1535
-        const maxWindow = 1536
-        const minPadding = 10
-        const maxPadding = 75
-        let requestId
-
-        // Function to gradually adjust padding of navigation items
-        function adjustPadding() {
-            // Select all navigation items
-            const navItems = document.querySelectorAll('.nav-item')
-
-            // Flag to check if any padding adjustment is done
-            let paddingAdjusted = false
-
-            navItems.forEach(function (item) {
-                // Get the computed padding of the current item
-                const currentPadding = parseInt(
-                    window.getComputedStyle(item).paddingLeft
-                )
-
-                // If the window width is greater than or equal to the max window
-                // and the current padding is less than the max padding
-                if (
-                    window.innerWidth >= maxWindow &&
-                    currentPadding < maxPadding
-                ) {
-                    // Add a pixel of padding
-                    item.style.paddingLeft = currentPadding + 1 + 'px'
-                    paddingAdjusted = true
-                    // If the window width is less than or equal to the min window
-                    // and the current padding is greater than the min padding
-                } else if (
-                    window.innerWidth <= minWindow &&
-                    currentPadding > minPadding
-                ) {
-                    // Subtract a pixel of padding
-                    item.style.paddingLeft = currentPadding - 1 + 'px'
-                    paddingAdjusted = true
-                }
-            })
-
-            // If padding was adjusted, request another animation frame
-            if (paddingAdjusted) {
-                requestId = requestAnimationFrame(adjustPadding)
-            }
-        }
-
-        // Function to handle resizing and adjust padding behavior accordingly
-        function adjustPaddingOnResize() {
-            // Cancel previous animation frame request, if any
-            cancelAnimationFrame(requestId)
-
-            // Check window size and start animation
-            if (
-                window.innerWidth >= maxWindow ||
-                window.innerWidth <= minWindow
-            ) {
-                requestId = requestAnimationFrame(adjustPadding)
-            }
-        }
-
-        // Add event listener for resize event to handle resizing of the window
-        window.addEventListener('resize', adjustPaddingOnResize)
-
-        // Set initial padding based on window width
-        const initialPadding =
-            window.innerWidth >= maxWindow ? maxPadding : minPadding
-
-        // Select all navigation items
-        const navItems = document.querySelectorAll('.nav-item')
-
-        // Set the initial padding for all navigation items
-        navItems.forEach((item) => {
-            item.style.paddingLeft = initialPadding + 'px'
-        })
     })
 </script>
 

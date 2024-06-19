@@ -29,7 +29,7 @@ title: nick-g.dev || Home
         <div class="flex flex-col items-center justify-center lg:flex-row">
             <!-- Image Container -->
             <div
-                class="lg flex h-72 max-h-96 min-h-72 w-72 min-w-72 max-w-96 justify-center object-contain lg:mb-10 lg:h-96 lg:w-1/2 lg:p-6"
+                class="flex h-72 max-h-96 min-h-72 w-72 min-w-72 max-w-96 justify-center object-contain sm:h-96 sm:w-96 lg:mb-10 lg:w-1/2 lg:p-6"
             >
                 <img
                     src="{{ relative_url }}/src/img/Logo_500x500.png"
@@ -56,24 +56,60 @@ title: nick-g.dev || Home
     </div>
 
     <!-- Add space -->
-    <div class="h-24"></div>
+    <div class="h-20"></div>
 
-    <div class="bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500">
-        <p class="text-lg">
+    <div
+        class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
+    >
+        <p
+            class="text-md px-6 pb-5 pt-10 text-center font-semibold sm:text-lg md:px-24 lg:px-48 lg:text-xl xl:px-56 2xl:px-64 2xl:text-2xl"
+        >
             By integrating best practices and staying ahead of emerging threats,
             I ensure that every project I undertake not only meets but exceeds
             expectations for reliability and safety.
         </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="m-10 rounded-xl shadow-lg dark:shadow-lime-500">
+                <img
+                    src="{{ relative_url }}/src/img/binary.jpg"
+                    class="h-full w-full rounded-xl shadow-lg dark:shadow-lime-500"
+                    alt="Logo Image"
+                />
+            </div>
+            <div
+                class="m-10 mb-16 rounded-xl shadow-lg dark:shadow-lime-500 lg:mb-8"
+            >
+                <img
+                    src="{{ relative_url }}/src/img/binary.jpg"
+                    class="h-full w-full rounded-xl shadow-lg dark:shadow-lime-500"
+                    alt="Logo Image"
+                />
+            </div>
+        </div>
     </div>
 
     <!-- Add space -->
-    <div class="h-24"></div>
+    <div class="h-20"></div>
 
-    <div class="bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500">
-        <p class="text-lg">
+    <div
+        class="rounded-content flex flex-col items-center justify-center bg-gray-300 align-middle shadow-lg dark:bg-stone-500 dark:shadow-lime-500 lg:flex-row"
+    >
+        <p
+            class="text-md px-10 pt-10 text-center align-middle font-semibold sm:px-24 sm:text-lg md:px-20 lg:w-1/2 lg:px-24 lg:pt-0 lg:text-xl 2xl:text-2xl"
+        >
             Let's collaborate on creating software that not only performs
             flawlessly but also protects your users' data with utmost integrity
         </p>
+
+        <!-- Image Container -->
+        <div class="flex h-full w-full p-10 lg:w-1/2">
+            <img
+                src="{{ relative_url }}/src/img/binary.jpg"
+                class="h-full w-full rounded-xl shadow-lg dark:shadow-lime-500"
+                alt="Logo Image"
+            />
+        </div>
     </div>
 
     <!-- Add space -->
