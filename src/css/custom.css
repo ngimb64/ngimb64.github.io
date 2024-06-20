@@ -74,7 +74,7 @@ Hero Section
 /*
 Body Content
 */
-.header-shadow-light {
+.header-shadow {
     text-shadow:
         1px 1px 0 white,
         1px 1px 0 white,
@@ -82,7 +82,7 @@ Body Content
         2px 2px 0 white;
 }
 
-.dark .header-shadow-light {
+.dark .header-shadow {
     text-shadow:
         1px 1px 0 black,
         1px 1px 0 black,
@@ -91,7 +91,7 @@ Body Content
 }
 
 .rounded-content {
-    border-radius: 50px;
+    border-radius: 75px;
 }
 
 /*
