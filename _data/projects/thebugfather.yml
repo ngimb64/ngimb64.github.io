@@ -1,39 +1,49 @@
 - title: Pentester Toolchain
-  description: Pentester Toolchain is command templating parallel execution automation system utilized in initial recon and enumeration.
+  description: Pentester Toolchain is command templating parallel execution automation system utilized in initial recon and enumeration
   url: https://github.com/TheBugFather/Pentester-Toolchain
+  image: binary.jpg
 
 - title: LFI Chef
-  description: Takes input wordlist in native path format to generate encoding evasion, path traversals, and null byte injections.
+  description: Takes input wordlist in native path format to generate encoding evasion, path traversals, and null byte injections
   url: https://github.com/TheBugFather/LFI-Chef
+  image: binary.jpg
 
 - title: Serial Spray
-  description: Automates generating Java serialized payload wordlist with Ysoserial and associated compression/encoding.
+  description: Automates generating Java serialized payload wordlist with Ysoserial and associated compression/encoding
   url: https://github.com/TheBugFather/Serial-Spray
+  image: binary.jpg
 
 - title: Advanced Keylogger
-  description: Gathers network information, then simultaniously logs keys, takes screenshots, takes webcam pictures, and records mic.
+  description: Gathers network information, then simultaniously logs keys, takes screenshots, takes webcam pictures, and records mic
   url: https://github.com/TheBugFather/Advanced-Keylogger
+  image: binary.jpg
 
 - title: HardDrive Crawler
-  description: Crawls recursive path in file system looking for data, encrypts regex matches and exfiltrates via email.
+  description: Crawls recursive path in file system looking for data, encrypts regex matches and exfiltrates via email
   url: https://github.com/TheBugFather/HardDrive-Crawler
+  image: binary.jpg
 
 - title: NetBrute
-  description: Python custom network service brute force tool for enumeration purposes.
+  description: Python custom network service brute force tool for enumeration purposes
   url: https://github.com/TheBugFather/NetBrute
+  image: binary.jpg
 
 - title: PyWordlist Toolset
-  description: Multi-mode wordlist generation tool supporting binaries, text files, PDF's, web scraping, directory enumeration, and wordlist sanitization.
+  description: Multi-mode wordlist generation tool supporting binaries, text files, PDF's, web scraping, directory enumeration, and wordlist sanitization
   url: https://github.com/TheBugFather/PyWordlist-Toolset
+  image: binary.jpg
 
 - title: Wordlist Feeder
-  description: Tool that manages feeding numerous wordlists into command of choice to automate bruting/fuzzing many lists.
+  description: Tool that manages feeding numerous wordlists into command of choice to automate bruting/fuzzing many lists
   url: https://github.com/TheBugFather/Wordlist-Feeder
+  image: binary.jpg
 
 - title: PyMetaScrubber
-  description: Scrubs the meta-data from the contents in the DataScrubDock folder.
+  description: Scrubs the meta-data from the contents in the DataScrubDock folder
   url: https://github.com/TheBugFather/PyMetaScrubber
+  image: binary.jpg
 
 - title: Shellcode Generator
-  description: Linux script to parse the raw bytes from objdump into shellcode.
+  description: Linux script to parse the raw bytes from objdump into shellcode
   url: https://github.com/TheBugFather/Shellcode-Generator
+  image: binary.jpg

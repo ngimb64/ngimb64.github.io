@@ -4,7 +4,7 @@ title: nick-g.dev || About
 
 <div
     id="content"
-    class="container mx-auto py-12 text-neutral-950 dark:text-gray-300"
+    class="container mx-auto pb-6 pt-12 text-neutral-950 dark:text-gray-300"
 >
     <!-- Add space -->
     <div class="h-12"></div>
@@ -14,7 +14,7 @@ title: nick-g.dev || About
     >
         <!-- Header -->
         <div
-            class="header-shadow flex max-w-full items-center justify-center py-12"
+            class="header-shadow flex max-w-full items-center justify-center pb-6 pt-12"
         >
             <h1
                 class="max-w-xs px-16 text-center text-lg font-bold sm:text-xl lg:px-10 lg:text-2xl 2xl:max-w-lg 2xl:px-0 2xl:text-3xl"
@@ -38,7 +38,7 @@ title: nick-g.dev || About
             </div>
 
             <!-- Image Container -->
-            <div class="flex h-full w-full p-14 lg:w-1/2">
+            <div class="flex h-full w-full p-10 sm:p-14 lg:w-1/2">
                 <img
                     src="{{ relative_url }}/src/img/binary.jpg"
                     class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
@@ -47,4 +47,222 @@ title: nick-g.dev || About
             </div>
         </div>
     </div>
+
+    <!-- Add space -->
+    <div class="h-12 sm:h-20"></div>
+
+    <div
+        class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
+    >
+        <!-- Horizontal Split for Image and Paragraph -->
+        <div class="flex flex-col items-center justify-center lg:flex-row">
+            <!-- Image Container -->
+            <div class="flex h-full w-full p-10 sm:p-14 lg:w-1/2">
+                <img
+                    src="{{ relative_url }}/src/img/binary.jpg"
+                    class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
+                    alt="Logo Image"
+                />
+            </div>
+
+            <!-- Paragraph Container -->
+            <div
+                class="w-full px-12 pb-12 text-center md:px-32 lg:w-1/2 lg:px-14 lg:py-0 xl:px-28 2xl:px-36"
+            >
+                <p
+                    class="text-md text-center font-semibold sm:text-lg lg:max-w-2xl lg:text-xl 2xl:text-2xl"
+                >
+                    I utilize my passion to develop secure software solutions
+                    and tools that help cyber security professionals.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add space -->
+    <div class="h-12 sm:h-20"></div>
+
+    <div
+        class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
+    >
+        <div class="px-8 pb-5 pt-10 md:px-24 lg:px-44 xl:px-80 2xl:px-96">
+            <p
+                class="text-md text-center font-semibold sm:text-lg lg:text-xl 2xl:text-2xl"
+            >
+                When I'm not working on computers, I spend time outside, playing
+                guitar, and steam gaming. I have been a guitarist around 17
+                years and enjoy playing a variety of genres of music on various
+                types of guitars.
+            </p>
+        </div>
+
+        <!-- Container for the image gallery -->
+        <div id="image-gallery" class="relative">
+            <!-- Full-width images with number text -->
+            <div class="mySlides hidden">
+                <div class="numbertext pl-4">1 / 5</div>
+                <div class="mx-auto flex items-center justify-center lg:w-3/5">
+                    <img
+                        src="{{ relative_url }}/src/img/about/8_String.jpg"
+                        class="max-w-full object-cover"
+                        alt="8 String"
+                        style="max-height: 40rem"
+                    />
+                </div>
+            </div>
+
+            <div class="mySlides hidden">
+                <div class="numbertext pl-4">2 / 5</div>
+                <div class="mx-auto flex items-center justify-center lg:w-3/5">
+                    <img
+                        src="{{ relative_url }}/src/img/about/Nylon_Guitar.jpg"
+                        class="max-w-full object-cover"
+                        alt="Nylon String"
+                        style="max-height: 40rem"
+                    />
+                </div>
+            </div>
+
+            <div class="mySlides hidden">
+                <div class="numbertext pl-4">3 / 5</div>
+                <div class="mx-auto flex items-center justify-center lg:w-3/5">
+                    <img
+                        src="{{ relative_url }}/src/img/about/Jazz_Guitar.jpg"
+                        class="max-w-full object-cover"
+                        alt="Jazz Guitar"
+                        style="max-height: 40rem"
+                    />
+                </div>
+            </div>
+
+            <div class="mySlides hidden">
+                <div class="numbertext pl-4">4 / 5</div>
+                <div class="mx-auto flex items-center justify-center lg:w-3/5">
+                    <img
+                        src="{{ relative_url }}/src/img/about/Electric_Guitar.jpg"
+                        class="max-w-full object-cover"
+                        alt="Ibanez RG"
+                        style="max-height: 40rem"
+                    />
+                </div>
+            </div>
+
+            <div class="mySlides hidden">
+                <div class="numbertext pl-4">5 / 5</div>
+                <div class="mx-auto flex items-center justify-center lg:w-3/5">
+                    <img
+                        src="{{ relative_url }}/src/img/about/Amp.jpg"
+                        class="max-w-full object-cover"
+                        alt="Roland Jazz Chorus"
+                        style="max-height: 40rem"
+                    />
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a
+                class="prev absolute left-0 top-1/2 -translate-y-1/2 transform cursor-pointer rounded-l-md bg-black px-4 py-2 text-2xl font-bold text-white"
+                onclick="plusSlides(-1)"
+                >&#10094;</a
+            >
+            <a
+                class="next absolute right-0 top-1/2 -translate-y-1/2 transform cursor-pointer rounded-r-md bg-black px-4 py-2 text-2xl font-bold text-white"
+                onclick="plusSlides(1)"
+                >&#10095;</a
+            >
+
+            <!-- Image text -->
+            <div
+                class="caption-container bg-gray-900 px-4 py-1 text-center text-white"
+            >
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail images -->
+            <div class="flex flex-wrap">
+                <div class="w-1/5">
+                    <img
+                        class="demo cursor w-full hover:opacity-50"
+                        src="{{ relative_url }}/src/img/about/8_String.jpg"
+                        onclick="currentSlide(1)"
+                        alt="8 String"
+                    />
+                </div>
+                <div class="w-1/5">
+                    <img
+                        class="demo cursor w-full hover:opacity-50"
+                        src="{{ relative_url }}/src/img/about/Nylon_Guitar.jpg"
+                        onclick="currentSlide(2)"
+                        alt="Nylon String"
+                    />
+                </div>
+                <div class="w-1/5">
+                    <img
+                        class="demo cursor w-full hover:opacity-50"
+                        src="{{ relative_url }}/src/img/about/Jazz_Guitar.jpg"
+                        onclick="currentSlide(3)"
+                        alt="Jazz Guitar"
+                    />
+                </div>
+                <div class="w-1/5">
+                    <img
+                        class="demo cursor w-full hover:opacity-50"
+                        src="{{ relative_url }}/src/img/about/Electric_Guitar.jpg"
+                        onclick="currentSlide(4)"
+                        alt="Ibanez RG"
+                    />
+                </div>
+                <div class="w-1/5">
+                    <img
+                        class="demo cursor w-full hover:opacity-50"
+                        src="{{ relative_url }}/src/img/about/Amp.jpg"
+                        onclick="currentSlide(5)"
+                        alt="Roland Jazz Chorus"
+                    />
+                </div>
+            </div>
+            <!-- Add space -->
+            <div class="h-16 sm:h-20"></div>
+        </div>
+    </div>
+
+    <!-- Add space -->
+    <div class="h-8 sm:h-12"></div>
 </div>
+
+<script>
+    let slideIndex = 1
+    showSlides(slideIndex)
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides((slideIndex += n))
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides((slideIndex = n))
+    }
+
+    function showSlides(n) {
+        let i
+        let slides = document.getElementsByClassName('mySlides')
+        let dots = document.getElementsByClassName('demo')
+        let captionText = document.getElementById('caption')
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none'
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '')
+        }
+        slides[slideIndex - 1].style.display = 'block'
+        dots[slideIndex - 1].className += ' active'
+        captionText.innerHTML = dots[slideIndex - 1].alt
+    }
+</script>
