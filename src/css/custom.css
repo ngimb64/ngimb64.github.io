@@ -94,6 +94,13 @@ Body Content
     border-radius: 75px;
 }
 
+@media (min-width: 1280px) {
+    .img-slideshow {
+        height: 32rem;
+        width: 32rem;
+    }
+}
+
 /*
 Footer
 */

@@ -11,7 +11,31 @@ title: nick-g.dev || Services
 
     <div
         class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
-    ></div>
+    >
+        <!-- Horizontal Split for Image and Paragraph -->
+        <div class="flex flex-col items-center justify-center lg:flex-row">
+            <!-- Paragraph Container -->
+            <div
+                class="w-full px-12 py-2 text-center md:px-32 lg:w-1/2 lg:px-14 lg:py-0 xl:px-28 2xl:px-36"
+            >
+                <p
+                    class="text-md text-center font-semibold sm:text-lg lg:max-w-2xl lg:text-xl 2xl:text-2xl"
+                >
+                    I utilize my passion to develop secure software solutions
+                    and tools that help cyber security professionals.
+                </p>
+            </div>
+
+            <!-- Image Container -->
+            <div class="flex h-full w-full p-10 sm:p-14 lg:w-1/2">
+                <img
+                    src="{{ relative_url }}/src/img/binary.jpg"
+                    class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
+                    alt="Logo Image"
+                />
+            </div>
+        </div>
+    </div>
 
     <!-- Add space -->
     <div class="h-8 sm:h-12"></div>
