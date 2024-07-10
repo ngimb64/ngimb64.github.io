@@ -1,0 +1,63 @@
+* {
+    line-height: 1.75rem;
+    word-spacing: 0.1rem;
+}
+
+main,
+.highlight {
+    padding: 0 1.25rem 0 1.25rem;
+}
+
+.highlight code {
+    white-space: pre-wrap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.25rem;
+}
+
+/* sm breakpoint */
+@media (min-width: 640px) {
+    main {
+        padding: 0 3rem 0 3rem;
+    }
+}
+
+/* md breakpoint */
+@media (min-width: 768px) {
+    main {
+        padding: 0 8rem 0 8rem;
+    }
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) {
+    main {
+        padding: 0 13rem 0 13rem;
+    }
+}
+
+/* xl breakpoint */
+@media (min-width: 1280px) {
+    main {
+        padding: 0 18rem 0 18rem;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    main {
+        padding: 0 23rem 0 23rem;
+    }
+}

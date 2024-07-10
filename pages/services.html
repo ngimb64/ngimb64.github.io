@@ -2,34 +2,47 @@
 title: nick-g.dev || Services
 ---
 
-<div
-    id="content"
-    class="container mx-auto py-12 text-neutral-950 dark:text-gray-300"
->
+<div id="content" class="text-neutral-950 dark:text-gray-300">
     <!-- Add space -->
     <div class="h-12"></div>
 
     <div
         class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
     >
+        <!-- Header -->
+        <div
+            class="header-shadow flex max-w-full items-center justify-center pb-6 pt-12"
+        >
+            <h1
+                class="px-10 text-center text-lg font-bold sm:text-xl lg:text-2xl 2xl:max-w-lg 2xl:px-0 2xl:text-3xl"
+            >
+                Simplicity Meets Security: Simplifying Secure Software
+            </h1>
+        </div>
+
         <!-- Horizontal Split for Image and Paragraph -->
         <div class="flex flex-col items-center justify-center lg:flex-row">
             <!-- Paragraph Container -->
             <div
-                class="w-full px-12 py-2 text-center md:px-32 lg:w-1/2 lg:px-14 lg:py-0 xl:px-28 2xl:px-36"
+                class="w-full px-4 py-2 sm:px-12 md:px-20 lg:w-3/5 lg:py-0 lg:pl-10 lg:pr-0 xl:pl-20"
             >
                 <p
-                    class="text-md text-center font-semibold sm:text-lg lg:max-w-2xl lg:text-xl 2xl:text-2xl"
+                    class="text-md text-center font-semibold sm:text-lg lg:text-xl 2xl:text-2xl"
                 >
-                    I utilize my passion to develop secure software solutions
-                    and tools that help cyber security professionals.
+                    In today's digital landscape, opting for secure software
+                    solutions isn't just prudent .. it's essential. I believe
+                    that achieving security is best achieved when integrated
+                    into the overall development process and the simplest
+                    approach is usually the best.
                 </p>
             </div>
 
             <!-- Image Container -->
-            <div class="flex h-full w-full p-10 sm:p-14 lg:w-1/2">
+            <div
+                class="flex h-full w-full items-center justify-center p-10 sm:p-14 md:p-24 md:pt-10 lg:w-2/5 lg:p-10"
+            >
                 <img
-                    src="{{ relative_url }}/src/img/binary.jpg"
+                    src="{{ relative_url }}/src/img/services/complex_lock.gif"
                     class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
                     alt="Logo Image"
                 />
@@ -38,5 +51,70 @@ title: nick-g.dev || Services
     </div>
 
     <!-- Add space -->
+    <div class="h-12 sm:h-14"></div>
+
+    <div
+        class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
+    >
+        <!-- Horizontal Split for Image and Paragraph -->
+        <div class="flex flex-col items-center justify-center">
+            <!-- Paragraph Container -->
+            <p
+                class="text-md px-6 pt-20 text-center font-semibold sm:px-12 sm:text-lg lg:px-40 lg:text-xl xl:px-32 2xl:text-2xl"
+            >
+                My streamlined approach ensures your data remains protected
+                without unnecessary complexity, allowing you to focus on what
+                matters most .. your business's growth and success. Click here
+                for contact information.
+            </p>
+
+            <!-- Image Container -->
+            <div
+                class="flex aspect-video items-center justify-center p-20 xl:h-4/5 xl:w-4/5 xl:p-10"
+            >
+                <img
+                    id="slideshow-image"
+                    src="{{ relative_url }}/src/img/services/complex_lock.gif"
+                    class="h-auto max-w-full rounded-3xl shadow-lg dark:shadow-lime-500"
+                    alt="Slideshow Image"
+                />
+            </div>
+        </div>
+    </div>
+
+    <!-- Add space -->
     <div class="h-8 sm:h-12"></div>
 </div>
+
+<!-- JS for automated image slide show -->
+<script>
+    // Array of image paths
+    const images = [
+        '{{ relative_url }}/src/img/services/Assembly_Project.png',
+        '{{ relative_url }}/src/img/services/C_Project1.png',
+        '{{ relative_url }}/src/img/services/C_Project2.png',
+        '{{ relative_url }}/src/img/services/Python_Project1.png',
+        '{{ relative_url }}/src/img/services/Python_Project2.png',
+        '{{ relative_url }}/src/img/services/Python_Project3.png',
+    ]
+
+    let currentIndex = 0
+    const slideshowImage = document.getElementById('slideshow-image')
+
+    // Function to select a random image on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        currentIndex = Math.floor(Math.random() * images.length)
+        slideshowImage.src = images[currentIndex]
+    })
+
+    // Function to start automatic slideshow
+    function startSlideshow() {
+        setInterval(function () {
+            currentIndex = (currentIndex + 1) % images.length
+            slideshowImage.src = images[currentIndex]
+        }, 3000) // Change image every 3 seconds (adjust as needed)
+    }
+
+    // Start automatic slideshow
+    startSlideshow()
+</script>

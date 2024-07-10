@@ -2,10 +2,7 @@
 title: nick-g.dev || Blog
 ---
 
-<div
-    id="content"
-    class="container mx-auto pb-6 pt-12 text-neutral-950 dark:text-gray-300"
->
+<div id="content" class="text-neutral-950 dark:text-gray-300">
     <!-- Add space -->
     <div class="h-12"></div>
 
@@ -14,32 +11,39 @@ title: nick-g.dev || Blog
         class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
     >
         <div class="grid grid-cols-1 lg:grid-cols-2">
+            {% for post in site.data.blog.posts %}
             <div
-                class="rounded-content m-5 p-8 text-center shadow-lg dark:shadow-lime-500 sm:m-10 sm:p-12"
+                class="rounded-content m-5 shadow-lg dark:shadow-lime-500 sm:m-8"
             >
-                <div class="flex justify-center">
-                    <img
-                        class="rounded-3xl"
-                        src="{{ relative_url }}/src/img/blog/under_construction.jpg"
-                    />
+                <div class="flex justify-center p-6 pb-0 sm:p-10 sm:pb-0">
+                    <a href="{{ post.url }}">
+                        <img
+                            class="rounded-3xl"
+                            src="{{ relative_url }}/src/img/blog/{{ post.image }}"
+                            height="500px"
+                            width="500px"
+                        />
+                    </a>
                 </div>
 
-                <div class="py-5">
-                    <h2 class="header-shadow text-lg font-bold lg:text-xl">
-                        Coming Soon
+                <div class="py-8">
+                    <h2
+                        class="header-shadow text-center text-lg font-bold xl:text-xl 2xl:text-2xl"
+                    >
+                        {{ post.title }}
                     </h2>
                 </div>
 
-                <div class="text-md font-semibold lg:text-lg">
-                    <p>
-                        Blog posts coming in the near future, still under
-                        construction
-                    </p>
-                </div>
+                <p
+                    class="px-10 pb-10 text-base sm:px-16 sm:text-center xl:text-lg 2xl:text-xl"
+                >
+                    {{ post.description }}
+                </p>
             </div>
+            {% endfor %}
         </div>
     </div>
 
     <!-- Add space -->
-    <div class="h-12"></div>
+    <div class="h-8 sm:h-12"></div>
 </div>
