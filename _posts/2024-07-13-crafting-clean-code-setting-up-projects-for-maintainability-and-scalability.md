@@ -364,9 +364,9 @@ if __name__ == '__main__':
     # This section should be about configuring the program in general and the highest level scope of execution
 
     # If the input is strictly via command line args this is where argument parsing occurs
-    # If there are only a few args sys.argv works fine, but argparse should be used for larger configurations
+    # If there are only a few args sys.argv works fine, but argparse is ideal for larger configurations
     OR
-    # IF the input is via a configuration file like YAML or TOML, then there should only be a few args tops
+    # If the input is via a configuration file like YAML or TOML, then there should only be one to a few args tops
     # It might be a good idea to implement a logic that prompts the user for input if initial input is empty or fails
 
     # If the program is of sufficient size set up a program configuration class and initialze it
@@ -395,13 +395,13 @@ if __name__ == '__main__':
 
     # Exception handler occurs if unknown exception occurs that is not caught in scope of main
     except Exception:
-        # This ensures that the full stack trace of the exception is displayed
+        # This ensures that the exceptions full stack trace is displayed (not safe for production, dev only)
         import traceback
         traceback.print_exc()
 
         # This sections logic could also be adjusted where to the above code runs when the program is
         # set to debug mode or exception information is stored locally to a file (not the most secure)
-        # or to a remote logging system (ideal for production enviroments) when debug mode is not set
+        # or to a remote logging system (ideal for production enviroments)
 
 # The interpreter prefers a single whitespace at the bottom of the file
 
