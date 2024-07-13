@@ -5,14 +5,14 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="title" content="nick-g.dev || Home" />
+        <meta name="title" content="nick-g.dev || Services" />
         <meta name="description" content="The official website of Nick-G Software Development." />
         <link
             rel="shortcut icon"
             href="/src/img/favicon_io/favicon.ico"
         />
         <link rel="stylesheet" href="/src/css/custom.css" />
-        <title>nick-g.dev || Home</title>
+        <title>nick-g.dev || Services</title>
     </head>
 
     <body class="flex min-h-screen flex-col bg-green-50 dark:bg-stone-700">
@@ -308,115 +308,244 @@
     <!-- Add space -->
     <div class="h-12"></div>
 
-    <!-- Hero Section -->
     <div
-        id="hero-section"
-        class="bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
+        class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
     >
         <!-- Header -->
         <div
-            class="header-shadow flex max-w-full items-center justify-center px-16 py-10 lg:pb-0"
+            class="header-shadow flex max-w-full items-center justify-center pb-6 pt-12"
         >
             <h1
-                class="max-w-xs text-center text-lg font-bold sm:text-xl lg:text-2xl 2xl:max-w-lg 2xl:text-3xl"
+                class="px-10 text-center text-lg font-bold sm:text-xl lg:text-2xl 2xl:max-w-lg 2xl:px-0 2xl:text-3xl"
             >
-                Precision Focused Developer Committed to Secure Solutions
+                Simplicity Meets Security: Simplifying Secure Software
             </h1>
         </div>
 
         <!-- Horizontal Split for Image and Paragraph -->
         <div class="flex flex-col items-center justify-center lg:flex-row">
-            <!-- Image Container -->
-            <div
-                class="flex h-72 max-h-96 min-h-72 w-72 min-w-72 max-w-96 justify-center object-contain sm:h-96 sm:w-96 lg:mb-10 lg:w-1/2 lg:p-6"
-            >
-                <img
-                    src="/src/img/DevLogo.png"
-                    class="h-full w-full rounded-full shadow-lg dark:shadow-lime-500"
-                    alt="Logo Image"
-                />
-            </div>
-
             <!-- Paragraph Container -->
             <div
-                class="w-full px-6 py-10 text-center lg:w-1/2 lg:px-12 lg:pt-0"
+                class="w-full px-4 py-2 sm:px-12 md:px-20 lg:w-3/5 lg:py-0 lg:pl-10 lg:pr-0 xl:pl-20"
             >
                 <p
-                    class="text-md font-semibold sm:text-lg lg:max-w-2xl lg:text-left lg:text-xl 2xl:text-2xl"
+                    class="text-md text-center font-semibold sm:text-lg lg:text-xl 2xl:text-2xl"
                 >
-                    I'm Nick G, a developer dedicated to crafting precise and
-                    secure solutions. With a meticulous approach to coding and a
-                    passion for innovation, I specialize in building robust
-                    applications that prioritize both functionality and
-                    security.
+                    In today's digital landscape, opting for secure software
+                    solutions isn't just prudent .. it's essential. I believe
+                    that achieving security is best achieved when integrated
+                    into the overall development process and the simplest
+                    approach is usually the best.
                 </p>
+            </div>
+
+            <!-- Image Container -->
+            <div
+                class="flex h-full w-full items-center justify-center p-10 sm:p-14 md:p-24 md:pt-10 lg:w-2/5 lg:p-10"
+            >
+                <img
+                    src="/src/img/services/complex_lock.gif"
+                    class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
+                    alt="Logo Image"
+                />
             </div>
         </div>
     </div>
 
     <!-- Add space -->
-    <div class="h-12 sm:h-20"></div>
+    <div class="h-12 sm:h-14"></div>
 
     <div
         class="rounded-content bg-gray-300 shadow-lg dark:bg-stone-500 dark:shadow-lime-500"
     >
-        <p
-            class="text-md px-6 pb-5 pt-20 text-center font-semibold sm:text-lg md:px-24 lg:px-48 lg:text-xl xl:px-56 2xl:px-64 2xl:text-2xl"
-        >
-            By integrating best practices and staying ahead of emerging threats,
-            I ensure that every project I undertake not only meets but exceeds
-            expectations for reliability and safety.
-        </p>
-
-        <div class="grid grid-cols-1 lg:grid-cols-2">
-            <div
-                class="m-10 mb-0 rounded-xl shadow-lg dark:shadow-lime-500 sm:m-14 lg:mb-14"
+        <!-- Horizontal Split for Image and Paragraph -->
+        <div class="flex flex-col items-center justify-center">
+            <!-- Paragraph Container -->
+            <p
+                class="text-md px-6 pb-8 pt-12 text-center font-semibold sm:px-12 sm:text-lg lg:px-40 lg:text-xl xl:px-44 2xl:px-64 2xl:text-2xl"
             >
-                <img
-                    src="/src/img/ReliableLock.jpg"
-                    class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
-                    alt="Logo Image"
-                />
+                My streamlined approach ensures your data remains protected
+                without unnecessary complexity, allowing you to focus on what
+                matters most .. your business's growth and success.
+            </p>
+
+            <div class="mx-auto flex w-80 justify-center p-7 pt-0">
+                <button
+                    class="rounded-md bg-blue-500 px-8 py-2 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-green-300"
+                    id="open-btn"
+                >
+                    Contact Information
+                </button>
             </div>
-            <div
-                class="m-10 mb-16 rounded-xl shadow-lg dark:shadow-lime-500 sm:m-14 lg:mb-14"
-            >
-                <img
-                    src="/src/img/DefenseShield.jpg"
-                    class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
-                    alt="Logo Image"
-                />
+
+            <!-- Modal -->
+            <div class="fixed top-56" id="modal">
+                <div
+                    class="relative top-20 mx-auto w-96 rounded-3xl border bg-white p-5 shadow-lg"
+                >
+                    <div class="mt-3 text-center">
+                        <div
+                            class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                fill="#000000"
+                                width="800px"
+                                height="800px"
+                                viewBox="0 0 1920 1920"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z"
+                                    fill-rule="evenodd"
+                                />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-lg font-medium leading-6 text-gray-800">
+                            Email Address
+                        </h3>
+
+                        <div class="mt-2 px-7 py-3">
+                            <p
+                                id="email-content"
+                                class="text-base text-gray-700"
+                            >
+                                Click the button below to reveal the email
+                                address.
+                            </p>
+                        </div>
+
+                        <div class="items-center px-4 py-3">
+                            <button
+                                id="ok-btn"
+                                class="w-full rounded-md bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            >
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <!-- Add space -->
-    <div class="h-12 sm:h-20"></div>
-
-    <div
-        class="rounded-content flex flex-col items-center justify-center bg-gray-300 align-middle shadow-lg dark:bg-stone-500 dark:shadow-lime-500 lg:flex-row"
-    >
-        <p
-            class="text-md px-10 pt-10 text-center align-middle font-semibold sm:px-24 sm:text-lg md:px-20 lg:w-1/2 lg:px-24 lg:pt-0 lg:text-xl 2xl:text-2xl"
-        >
-            Let's collaborate on creating software that not only performs
-            exceptionally, but also protects your users data with utmost
-            integrity
-        </p>
-
-        <!-- Image Container -->
-        <div class="flex h-full w-full p-14 lg:w-1/2">
-            <img
-                src="/src/img/Collaborate.jpeg"
-                class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
-                alt="Logo Image"
-            />
+            <!-- Image Container -->
+            <div class="justify-cente flex items-center">
+                <div class="aspect-video p-6 pt-0 2xl:p-14 2xl:pt-5">
+                    <img
+                        id="slideshow-image"
+                        src="/src/img/services/complex_lock.gif"
+                        class="h-auto max-w-full rounded-3xl shadow-lg dark:shadow-lime-500"
+                        alt="Slideshow Image"
+                    />
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Add space -->
     <div class="h-8 sm:h-12"></div>
 </div>
+
+<!-- JS for modal popup with dynamic email obfuscation protection -->
+<script>
+    // Function to deobfuscate email address from reversed hex array
+    function reversedHexArrayToString(reversedHexArray) {
+        let hexChars = reversedHexArray.slice().reverse()
+        let email = ''
+        for (let hex of hexChars) {
+            let asciiChar = String.fromCharCode(parseInt(hex, 16))
+            email += asciiChar
+        }
+        return email
+    }
+
+    // Provided reversed hex array for the email address
+    let reversedHexArray = [
+        '76',
+        '65',
+        '64',
+        '2e',
+        '67',
+        '2d',
+        '6b',
+        '63',
+        '69',
+        '6e',
+        '40',
+        '34',
+        '36',
+        '6c',
+        '65',
+        '62',
+        '6d',
+        '69',
+        '67',
+        '6e',
+    ]
+
+    // Reverse the hex array to get the original email address
+    let emailAddress = reversedHexArrayToString(reversedHexArray)
+
+    // Set up modal interaction
+    let modal = document.getElementById('modal')
+    let btn = document.getElementById('open-btn')
+    let okBtn = document.getElementById('ok-btn')
+    let emailContent = document.getElementById('email-content')
+
+    // Hide the modal initially
+    modal.style.display = 'none'
+
+    btn.onclick = function () {
+        // Display the deobfuscated email address in the modal content
+        emailContent.textContent = emailAddress
+        modal.style.display = 'block'
+    }
+
+    okBtn.onclick = function () {
+        // Close the modal when OK button is clicked
+        modal.style.display = 'none'
+    }
+
+    window.onclick = function (event) {
+        // Close the modal if user clicks outside of it
+        if (event.target == modal) {
+            modal.style.display = 'none'
+        }
+    }
+</script>
+
+<!-- JS for automated image slide show -->
+<script>
+    // Array of image paths
+    const images = [
+        '/src/img/services/Assembly_Project.png',
+        '/src/img/services/C_Project1.png',
+        '/src/img/services/C_Project2.png',
+        '/src/img/services/Python_Project1.png',
+        '/src/img/services/Python_Project2.png',
+        '/src/img/services/Python_Project3.png',
+    ]
+
+    let currentIndex = 0
+    const slideshowImage = document.getElementById('slideshow-image')
+
+    // Function to select a random image on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        currentIndex = Math.floor(Math.random() * images.length)
+        slideshowImage.src = images[currentIndex]
+    })
+
+    // Function to start automatic slideshow
+    function startSlideshow() {
+        setInterval(function () {
+            currentIndex = (currentIndex + 1) % images.length
+            slideshowImage.src = images[currentIndex]
+        }, 3000) // Change image every 3 seconds (adjust as needed)
+    }
+
+    // Start automatic slideshow
+    startSlideshow()
+</script>
 </main>
 
         <footer

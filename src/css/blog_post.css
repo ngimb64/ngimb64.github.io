@@ -1,0 +1,254 @@
+main * {
+    word-spacing: 0.1rem;
+}
+
+main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+center {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 16rem;
+    padding: 0 0.75rem 0 0.75rem;
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    line-height: 1.75rem;
+    padding: 0 0.75rem 0 0.75rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+main ul {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    list-style-type: disc;
+    margin-left: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+main ul li a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1rem;
+    hyphens: auto;
+    line-height: 1.5rem;
+    padding: 0 0.75rem 0 0.75rem;
+    word-break: keep-all;
+}
+
+.highlight {
+    display: flex;
+    background-color: rgb(220, 220, 220);
+    border-radius: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.875rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1.25rem;
+    margin-top: 0.75rem;
+    max-width: 96rem;
+    overflow-wrap: break-word;
+    padding: 0.75rem;
+    width: auto;
+    word-break: break-all;
+}
+
+.language-plaintext pre {
+    margin: 0; /* Remove default margin */
+    white-space: pre-wrap; /* Preserve formatting and wrap text */
+}
+
+.language-plaintext code {
+    display: block; /* Display as block to contain within the container */
+    color: #000000; /* Dark text color */
+}
+
+.language-plaintext.highlighter-rouge {
+    display: flex;
+    justify-content: center;
+}
+
+.language-plaintext.highlighter-rouge .highlight {
+    width: fit-content;
+    min-width: 16rem;
+}
+
+/* sm breakpoint */
+@media (min-width: 640px) {
+    center {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        max-width: 24rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        padding: 0 3rem 0 3rem;
+    }
+
+    main ul {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        padding: 0 3rem 0 3rem;
+    }
+
+    .highlight {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .language-plaintext.highlighter-rouge .highlight {
+        min-width: 24rem;
+    }
+}
+
+/* md breakpoint */
+@media (min-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0 8rem 0 8rem;
+    }
+
+    main ul {
+        margin-left: 8rem;
+        padding-right: 8rem;
+    }
+
+    p {
+        padding: 0 8rem 0 8rem;
+    }
+}
+
+/* lg breakpoint */
+@media (min-width: 1024px) {
+    center {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        max-width: 28rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding: 0 13rem 0 13rem;
+    }
+
+    main ul {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        margin-left: 13rem;
+        padding-right: 13rem;
+    }
+
+    p {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+        padding: 0 13rem 0 13rem;
+    }
+
+    .highlight {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+}
+
+/* xl breakpoint */
+@media (min-width: 1280px) {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        padding: 0 18rem 0 18rem;
+    }
+
+    main ul {
+        margin-left: 18rem;
+        padding-right: 18rem;
+    }
+
+    p {
+        padding: 0 18rem 0 18rem;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    center {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        max-width: 32rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        padding: 0 23rem 0 23rem;
+    }
+
+    main ul {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-left: 23rem;
+        padding-right: 23rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding: 0 23rem 0 23rem;
+    }
+
+    .highlight {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+}

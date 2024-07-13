@@ -1,0 +1,118 @@
+@import url(./tailwind.css);
+
+/*
+Tailwind CSS Breakpoints
+
+Breakpoint prefix	Minimum width	CSS
+----------------------------------------------------------------------
+    sm	                640px	    @media (min-width: 640px) { ... }
+    md	                768px	    @media (min-width: 768px) { ... }
+    lg	                1024px	    @media (min-width: 1024px) { ... }
+    xl	                1280px	    @media (min-width: 1280px) { ... }
+    2xl	                1536px	    @media (min-width: 1536px) { ... }
+*/
+
+/*
+Nav Bar
+*/
+.navbar {
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+#logo-1,
+#logo-2 {
+    filter: brightness(175%);
+}
+
+#logo-text,
+.nav-item {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark #logo-text,
+.dark .nav-item {
+    text-shadow: 1px 1px 2px rgb(255, 255, 0);
+}
+
+#dropdown-menu {
+    top: 4.75rem;
+}
+
+/*
+Hero Section
+*/
+#hero-section {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+@media (min-width: 768px) {
+    #hero-section {
+        border-top-left-radius: 250px;
+        border-top-right-radius: 250px;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+    }
+}
+
+@media (min-width: 1280px) {
+    #hero-section {
+        border-top-left-radius: 5000px;
+        border-top-right-radius: 5000px;
+        border-bottom-left-radius: 1000px;
+        border-bottom-right-radius: 1000px;
+    }
+}
+
+/*
+Body Content
+*/
+.header-shadow {
+    text-shadow:
+        1px 1px 0 white,
+        1px 1px 0 white,
+        1px 1px 0 white,
+        2px 2px 0 white;
+}
+
+.dark .header-shadow {
+    text-shadow:
+        1px 1px 0 black,
+        1px 1px 0 black,
+        1px 1px 0 black,
+        2px 2px 0 black;
+}
+
+.rounded-content {
+    border-radius: 75px;
+}
+
+@media (min-width: 1280px) {
+    .img-slideshow {
+        height: 32rem;
+        width: 32rem;
+    }
+}
+
+/*
+Footer
+*/
+footer {
+    border-top-left-radius: 1000px;
+    border-top-right-radius: 1000px;
+    --tw-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1),
+        5px 0 6px -4px rgba(0, 0, 0, 0.1), -5px 0 6px -4px rgba(0, 0, 0, 0.1);
+    --tw-shadow-colored: 0 -10px 15px -3px var(--tw-shadow-color),
+        5px 0 6px -4px var(--tw-shadow-color),
+        -5px 0 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.dark footer {
+    --tw-shadow-color: #84cc16;
+    --tw-shadow: var(--tw-shadow-colored);
+}
