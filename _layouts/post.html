@@ -1,0 +1,39 @@
+<!-- prettier-ignore -->
+{%- assign title = page.title | default: site.title -%}
+{%- assign description = page.description | default: site.description -%}
+<!-- prettier-ignore -->
+
+<!doctype html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="title" content="{{ title | xml_escape }}" />
+        <meta name="description" content="{{ description | xml_escape }}" />
+        <link
+            rel="shortcut icon"
+            href="{{ relative_url }}/src/img/favicon_io/favicon.ico"
+        />
+        <link rel="stylesheet" href="{{ relative_url }}/src/css/custom.css" />
+        <link
+            rel="stylesheet"
+            href="{{ relative_url }}/src/css/blog_post.css"
+        />
+        <title>{{ title }}</title>
+    </head>
+
+    <body class="flex min-h-screen flex-col bg-green-50 dark:bg-stone-700">
+        {% include nav.html %}
+
+        <main
+            class="container mx-auto flex-1 py-20 text-neutral-950 dark:text-gray-300"
+        >
+            {{ content }}
+        </main>
+
+        {% include footer.html %}
+
+        <script src="{{ relative_url }}/src/js/colorToggler.js"></script>
+        <script src="{{ relative_url }}/src/js/gsap.min.js"></script>
+    </body>
+</html>

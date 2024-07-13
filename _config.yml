@@ -1,0 +1,33 @@
+# Site settings
+title: nick-g.dev
+description: The official website of Nick-G Software Development.
+baseurl: ""
+url: "https://nick-g.dev"
+
+# Build settings
+markdown: kramdown
+
+# Defaults
+defaults:
+  - scope:
+      path: "*"
+    values:
+      layout: default
+
+# Exclude
+exclude:
+  - _drafts/
+  - .git
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - node_modules/
+  - README.md
+  - .sass-cache/
+  - .jekyll-cache/
+
+# Included plugins
+plugins:
+  - jekyll-include-cache
+  - jekyll-redirect-from

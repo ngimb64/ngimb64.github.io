@@ -1,0 +1,49 @@
+- title: Pentester Toolchain
+  description: Pentester Toolchain is command templating parallel execution automation system utilized in initial recon and enumeration
+  url: https://github.com/TheBugFather/Pentester-Toolchain
+  image: pentester_toolchain.jpeg
+
+- title: LFI Chef
+  description: Takes input wordlist in native path format to generate encoding evasion, path traversals, and null byte injections
+  url: https://github.com/TheBugFather/LFI-Chef
+  image: lfi_chef.jpeg
+
+- title: Serial Spray
+  description: Automates generating Java serialized payload wordlist with Ysoserial and associated compression/encoding
+  url: https://github.com/TheBugFather/Serial-Spray
+  image: serial_spray.jpg
+
+- title: Advanced Keylogger
+  description: Gathers network information, then simultaniously logs keys, takes screenshots, takes webcam pictures, and records mic
+  url: https://github.com/TheBugFather/Advanced-Keylogger
+  image: advanced_keylogger.jpeg
+
+- title: HardDrive Crawler
+  description: Crawls recursive path in file system looking for data, encrypts regex matches and exfiltrates via email
+  url: https://github.com/TheBugFather/HardDrive-Crawler
+  image: harddrive_crawler.jpeg
+
+- title: NetBrute
+  description: Python custom network service brute force tool for enumeration purposes
+  url: https://github.com/TheBugFather/NetBrute
+  image: netbrute.jpeg
+
+- title: PyWordlist Toolset
+  description: Multi-mode wordlist generation tool supporting binaries, text files, PDF's, web scraping, directory enumeration, and wordlist sanitization
+  url: https://github.com/TheBugFather/PyWordlist-Toolset
+  image: pywordlist_toolset.jpeg
+
+- title: Wordlist Feeder
+  description: Tool that manages feeding numerous wordlists into command of choice to automate bruting/fuzzing many lists
+  url: https://github.com/TheBugFather/Wordlist-Feeder
+  image: wordlist_feeder.jpeg
+
+- title: PyMetaScrubber
+  description: Scrubs the meta-data from the contents in the DataScrubDock folder
+  url: https://github.com/TheBugFather/PyMetaScrubber
+  image: pymetascrubber.jpeg
+
+- title: Shellcode Generator
+  description: Linux script to parse the raw bytes from objdump into shellcode
+  url: https://github.com/TheBugFather/Shellcode-Generator
+  image: shellcode_generator.jpeg
