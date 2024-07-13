@@ -60,24 +60,82 @@ title: nick-g.dev || Services
         <div class="flex flex-col items-center justify-center">
             <!-- Paragraph Container -->
             <p
-                class="text-md px-6 pt-20 text-center font-semibold sm:px-12 sm:text-lg lg:px-40 lg:text-xl xl:px-32 2xl:text-2xl"
+                class="text-md px-6 pb-8 pt-12 text-center font-semibold sm:px-12 sm:text-lg lg:px-40 lg:text-xl xl:px-44 2xl:px-64 2xl:text-2xl"
             >
                 My streamlined approach ensures your data remains protected
                 without unnecessary complexity, allowing you to focus on what
-                matters most .. your business's growth and success. Click here
-                for contact information.
+                matters most .. your business's growth and success.
             </p>
 
+            <div class="mx-auto flex w-80 justify-center p-7 pt-0">
+                <button
+                    class="rounded-md bg-blue-500 px-8 py-2 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-green-300"
+                    id="open-btn"
+                >
+                    Contact Information
+                </button>
+            </div>
+
+            <!-- Modal -->
+            <div class="fixed top-56" id="modal">
+                <div
+                    class="relative top-20 mx-auto w-96 rounded-3xl border bg-white p-5 shadow-lg"
+                >
+                    <div class="mt-3 text-center">
+                        <div
+                            class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100"
+                        >
+                            <svg
+                                class="h-6 w-6"
+                                fill="#000000"
+                                width="800px"
+                                height="800px"
+                                viewBox="0 0 1920 1920"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z"
+                                    fill-rule="evenodd"
+                                />
+                            </svg>
+                        </div>
+
+                        <h3 class="text-lg font-medium leading-6 text-gray-800">
+                            Email Address
+                        </h3>
+
+                        <div class="mt-2 px-7 py-3">
+                            <p
+                                id="email-content"
+                                class="text-base text-gray-700"
+                            >
+                                Click the button below to reveal the email
+                                address.
+                            </p>
+                        </div>
+
+                        <div class="items-center px-4 py-3">
+                            <button
+                                id="ok-btn"
+                                class="w-full rounded-md bg-blue-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-300"
+                            >
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Image Container -->
-            <div
-                class="flex aspect-video items-center justify-center p-20 xl:h-4/5 xl:w-4/5 xl:p-10"
-            >
-                <img
-                    id="slideshow-image"
-                    src="{{ relative_url }}/src/img/services/complex_lock.gif"
-                    class="h-auto max-w-full rounded-3xl shadow-lg dark:shadow-lime-500"
-                    alt="Slideshow Image"
-                />
+            <div class="justify-cente flex items-center">
+                <div class="aspect-video p-6 pt-0 2xl:p-14 2xl:pt-5">
+                    <img
+                        id="slideshow-image"
+                        src="{{ relative_url }}/src/img/services/complex_lock.gif"
+                        class="h-auto max-w-full rounded-3xl shadow-lg dark:shadow-lime-500"
+                        alt="Slideshow Image"
+                    />
+                </div>
             </div>
         </div>
     </div>
@@ -85,6 +143,74 @@ title: nick-g.dev || Services
     <!-- Add space -->
     <div class="h-8 sm:h-12"></div>
 </div>
+
+<!-- JS for modal popup with dynamic email obfuscation protection -->
+<script>
+    // Function to deobfuscate email address from reversed hex array
+    function reversedHexArrayToString(reversedHexArray) {
+        let hexChars = reversedHexArray.slice().reverse()
+        let email = ''
+        for (let hex of hexChars) {
+            let asciiChar = String.fromCharCode(parseInt(hex, 16))
+            email += asciiChar
+        }
+        return email
+    }
+
+    // Provided reversed hex array for the email address
+    let reversedHexArray = [
+        '76',
+        '65',
+        '64',
+        '2e',
+        '67',
+        '2d',
+        '6b',
+        '63',
+        '69',
+        '6e',
+        '40',
+        '34',
+        '36',
+        '6c',
+        '65',
+        '62',
+        '6d',
+        '69',
+        '67',
+        '6e',
+    ]
+
+    // Reverse the hex array to get the original email address
+    let emailAddress = reversedHexArrayToString(reversedHexArray)
+
+    // Set up modal interaction
+    let modal = document.getElementById('modal')
+    let btn = document.getElementById('open-btn')
+    let okBtn = document.getElementById('ok-btn')
+    let emailContent = document.getElementById('email-content')
+
+    // Hide the modal initially
+    modal.style.display = 'none'
+
+    btn.onclick = function () {
+        // Display the deobfuscated email address in the modal content
+        emailContent.textContent = emailAddress
+        modal.style.display = 'block'
+    }
+
+    okBtn.onclick = function () {
+        // Close the modal when OK button is clicked
+        modal.style.display = 'none'
+    }
+
+    window.onclick = function (event) {
+        // Close the modal if user clicks outside of it
+        if (event.target == modal) {
+            modal.style.display = 'none'
+        }
+    }
+</script>
 
 <!-- JS for automated image slide show -->
 <script>
