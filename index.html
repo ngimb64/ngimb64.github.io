@@ -1,8 +1,310 @@
----
-title: nick-g.dev || Home
----
+<!-- prettier-ignore --><!-- prettier-ignore -->
 
-<div id="content" class="text-neutral-950 dark:text-gray-300">
+<!doctype html>
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="title" content="nick-g.dev || Home" />
+        <meta name="description" content="The official website of Nick-G Software Development." />
+        <link
+            rel="shortcut icon"
+            href="/src/img/favicon_io/favicon.ico"
+        />
+        <link rel="stylesheet" href="/src/css/custom.css" />
+        <title>nick-g.dev || Home</title>
+    </head>
+
+    <body class="flex min-h-screen flex-col bg-green-50 dark:bg-stone-700">
+        <nav
+    class="navbar fixed left-0 top-0 z-50 max-h-8 border-b-2 border-l-2 border-r-2 border-neutral-950 bg-stone-300 align-middle shadow-lg dark:border-yellow-300 dark:bg-neutral-950 dark:shadow-lime-500"
+>
+    <!-- Logo -->
+    <div class="navbar-start ml-2 mr-2 flex items-center sm:ml-6">
+        <a class="navbar-brand flex items-center" tabindex="-1">
+            <img
+                src="/src/img/binary_icon.png"
+                id="logo-1"
+                class="brand-logo max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
+            />
+            <span
+                id="logo-text"
+                class="whitespace-nowrap px-2 text-3xl font-semibold text-neutral-950 dark:text-lime-500 2xl:text-4xl"
+                >nick-g.dev</span
+            >
+            <img
+                src="/src/img/binary_icon.png"
+                id="logo-2"
+                class="brand-logo max-h-12 max-w-12 rounded-full 2xl:max-h-14 2xl:max-w-14"
+            />
+        </a>
+    </div>
+
+    <!-- Navbar Links -->
+    <div
+        class="navbar-center hidden items-center text-center font-semibold text-neutral-950 dark:text-lime-500 lg:flex"
+    >
+        <ul class="menu menu-horizontal flex text-lg xl:text-xl 2xl:text-2xl">
+            <li class="nav-item xl:px-2 2xl:px-6">
+                <a
+                    href="/"
+                    class="text-center dark:hover:bg-stone-500"
+                    >Home</a
+                >
+            </li>
+            <li class="nav-item xl:px-2 2xl:px-6">
+                <a
+                    href="/pages/about.html"
+                    class="text-center dark:hover:bg-stone-500"
+                    >About</a
+                >
+            </li>
+            <li class="nav-item xl:px-2 2xl:px-6">
+                <a
+                    href="/pages/blog.html"
+                    class="text-center dark:hover:bg-stone-500"
+                    >Blog</a
+                >
+            </li>
+            <li class="nav-item xl:px-2 2xl:px-6">
+                <a
+                    href="/pages/projects.html"
+                    class="text-center dark:hover:bg-stone-500"
+                    >Projects</a
+                >
+            </li>
+            <li class="nav-item xl:px-2 2xl:px-6">
+                <a
+                    href="/pages/services.html"
+                    class="text-center dark:hover:bg-stone-500"
+                    >Services</a
+                >
+            </li>
+        </ul>
+    </div>
+
+    <!-- Dropdown menu (hidden on viewports larger than 1024px) -->
+    <div
+        id="dropdown-menu"
+        class="fixed inset-x-1/4 mx-auto hidden min-w-32 max-w-96 rounded-3xl border-2 border-neutral-950 bg-stone-300 text-center text-neutral-950 shadow-lg dark:border-yellow-300 dark:bg-neutral-950 dark:text-lime-500 dark:shadow-lime-500 lg:hidden"
+    >
+        <ul class="text-xl font-semibold">
+            <li>
+                <a
+                    href="/"
+                    class="block rounded-3xl pb-3 pt-6 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >Home</a
+                >
+            </li>
+            <li>
+                <a
+                    href="/pages/about.html"
+                    class="block rounded-3xl py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >About</a
+                >
+            </li>
+            <li>
+                <a
+                    href="/pages/blog.html"
+                    class="block rounded-3xl py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >Blog</a
+                >
+            </li>
+            <li>
+                <a
+                    href="/pages/projects.html"
+                    class="block rounded-3xl py-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >Projects</a
+                >
+            </li>
+            <li>
+                <a
+                    href="/pages/services.html"
+                    class="block rounded-3xl pb-6 pt-3 hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >Services</a
+                >
+            </li>
+        </ul>
+    </div>
+
+    <!-- End section on far right with toggles -->
+    <div class="navbar-end flex items-center">
+        <label class="btn btn-circle swap swap-rotate mr-2 sm:mr-4 lg:hidden">
+            <!-- this hidden checkbox controls the state -->
+            <input id="mobile-menu-toggle" type="checkbox" />
+
+            <!-- hamburger icon -->
+            <svg
+                class="swap-off fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+            >
+                <path
+                    d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+                />
+            </svg>
+
+            <!-- close icon -->
+            <svg
+                class="swap-on fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 512 512"
+            >
+                <polygon
+                    points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+                />
+            </svg>
+        </label>
+
+        <!-- Light/Dark toggle -->
+        <label class="btn btn-circle swap swap-rotate mr-2 sm:mr-6">
+            <!-- this hidden checkbox controls the state -->
+            <input
+                id="theme-toggle"
+                type="checkbox"
+                class="theme-controller"
+                value="synthwave"
+            />
+
+            <!-- sun icon -->
+            <svg
+                class="swap-off h-10 w-10 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+                />
+            </svg>
+
+            <!-- moon icon -->
+            <svg
+                class="swap-on h-10 w-10 fill-current"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+                />
+            </svg>
+        </label>
+    </div>
+</nav>
+
+<!-- JS for mobile menu burger toggle -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('mobile-menu-toggle')
+        const dropdownMenu = document.getElementById('dropdown-menu')
+
+        toggleButton.addEventListener('click', function () {
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none'
+            } else {
+                dropdownMenu.style.display = 'block'
+            }
+        })
+    })
+</script>
+
+<!-- JS for the spinning logo animation one at a time in a synchronized fashion -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const logo1 = document.getElementById('logo-1')
+        const logo2 = document.getElementById('logo-2')
+        let currentLogo = logo1
+        let animationRunning = false // Flag to track if animation is running
+
+        function spinLogo() {
+            const nextLogo = currentLogo === logo1 ? logo2 : logo1
+            currentLogo.style.transition = 'transform 1s ease'
+            currentLogo.style.transform = 'rotate(360deg)'
+
+            setTimeout(() => {
+                currentLogo.style.transition = 'none'
+                currentLogo.style.transform = 'rotate(0deg)'
+                currentLogo = nextLogo
+                // Check if animation should continue running
+                if (animationRunning) {
+                    spinLogo()
+                }
+            }, 1250)
+        }
+
+        // Function to start or stop the animation based on viewport width
+        function handleAnimation() {
+            if (window.innerWidth > 440) {
+                // Start animation if viewport width is greater than 440px
+                animationRunning = true
+                spinLogo()
+            } else {
+                // Stop animation if viewport width is 440px or less
+                animationRunning = false
+            }
+        }
+
+        // Call handleAnimation initially to set up the animation based on viewport width
+        handleAnimation()
+
+        // Add event listener for window resize event
+        window.addEventListener('resize', handleAnimation)
+    })
+</script>
+
+<!-- JS for fading out and removing logos for devices under 500px of screen width -->
+<script>
+    // Wait for the DOM content to be fully loaded
+    document.addEventListener('DOMContentLoaded', function () {
+        // Function to adjust visibility of logo images based on window width
+        function adjustImageVisibility() {
+            var windowWidth = window.innerWidth
+            var isSmallScreen = windowWidth <= 440
+
+            // Select all logo images
+            var logoImages = document.querySelectorAll('.brand-logo')
+
+            // Iterate over each logo image
+            logoImages.forEach(function (logoImage) {
+                // Get the current opacity of the logo image
+                var currentOpacity = parseFloat(
+                    window.getComputedStyle(logoImage).opacity
+                )
+
+                // If it's a small screen and the logo is visible
+                if (isSmallScreen && currentOpacity > 0) {
+                    // Fade out the logo using GSAP animation
+                    gsap.to(logoImage, {
+                        opacity: 0,
+                        duration: 0.1,
+                        onComplete: function () {
+                            // Once animation is complete, hide the logo
+                            logoImage.style.display = 'none'
+                        },
+                    })
+                    // If it's not a small screen and the logo is hidden
+                } else if (!isSmallScreen && currentOpacity < 1) {
+                    // Show the logo
+                    logoImage.style.display = 'inline-block'
+                    // Fade in the logo using GSAP animation
+                    gsap.to(logoImage, { opacity: 1, duration: 0.5 })
+                }
+            })
+        }
+
+        // Call the adjustImageVisibility function initially
+        adjustImageVisibility()
+
+        // Add event listener for window resize event
+        window.addEventListener('resize', adjustImageVisibility)
+    })
+</script>
+
+
+        <main class="container mx-auto flex-1 pb-6 pt-12"><div id="content" class="text-neutral-950 dark:text-gray-300">
     <!-- Add space -->
     <div class="h-12"></div>
 
@@ -29,7 +331,7 @@ title: nick-g.dev || Home
                 class="flex h-72 max-h-96 min-h-72 w-72 min-w-72 max-w-96 justify-center object-contain sm:h-96 sm:w-96 lg:mb-10 lg:w-1/2 lg:p-6"
             >
                 <img
-                    src="{{ relative_url }}/src/img/DevLogo.png"
+                    src="/src/img/DevLogo.png"
                     class="h-full w-full rounded-full shadow-lg dark:shadow-lime-500"
                     alt="Logo Image"
                 />
@@ -71,7 +373,7 @@ title: nick-g.dev || Home
                 class="m-10 mb-0 rounded-xl shadow-lg dark:shadow-lime-500 sm:m-14 lg:mb-14"
             >
                 <img
-                    src="{{ relative_url }}/src/img/ReliableLock.jpg"
+                    src="/src/img/ReliableLock.jpg"
                     class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
                     alt="Logo Image"
                 />
@@ -80,7 +382,7 @@ title: nick-g.dev || Home
                 class="m-10 mb-16 rounded-xl shadow-lg dark:shadow-lime-500 sm:m-14 lg:mb-14"
             >
                 <img
-                    src="{{ relative_url }}/src/img/DefenseShield.jpg"
+                    src="/src/img/DefenseShield.jpg"
                     class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
                     alt="Logo Image"
                 />
@@ -105,7 +407,7 @@ title: nick-g.dev || Home
         <!-- Image Container -->
         <div class="flex h-full w-full p-14 lg:w-1/2">
             <img
-                src="{{ relative_url }}/src/img/Collaborate.jpeg"
+                src="/src/img/Collaborate.jpeg"
                 class="h-full w-full rounded-3xl shadow-lg dark:shadow-lime-500"
                 alt="Logo Image"
             />
@@ -115,3 +417,39 @@ title: nick-g.dev || Home
     <!-- Add space -->
     <div class="h-8 sm:h-12"></div>
 </div>
+</main>
+
+        <footer
+    class="relative bottom-0 w-full border-l-2 border-r-2 border-t-2 border-neutral-950 bg-stone-300 dark:border-yellow-300 dark:bg-slate-950"
+>
+    <div
+        class="container mx-auto flex items-center justify-between px-12 py-1 text-center"
+    >
+        <p class="px-2 text-xs text-neutral-950 dark:text-lime-500">
+            &copy; 2024 nick-g.dev. All rights
+            reserved.
+        </p>
+        <div
+            class="flex min-h-8 min-w-16 items-center space-x-3 rounded-xl bg-neutral-50 p-1"
+        >
+            <a
+                href="https://github.com/ngimb64"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/src/img/github.png"
+            /></a>
+            <a
+                href="https://www.linkedin.com/in/nicholas-gimbel/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img src="/src/img/linkedin.png"
+            /></a>
+        </div>
+    </div>
+</footer>
+
+
+        <script src="/src/js/colorToggler.js"></script>
+        <script src="/src/js/gsap.min.js"></script>
+    </body>
+</html>
