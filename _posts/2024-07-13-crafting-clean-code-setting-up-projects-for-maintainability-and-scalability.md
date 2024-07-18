@@ -99,10 +99,6 @@ If the project size is anticipated to be large, putting function references in t
 
 &nbsp;
 
-Approaching development project layout can vary depending on the language and the purpose. Command line interface (CLI) are a bit different from Graphical User Interface (GUI) layouts because the visual aspect of the program is derived only from print statements rather than having an entirely separate object interface from the rest of the code base derived from a UI library related to the language. While different types of programs have different purposes, most programs share the same commonality that that interact with input to achieve something while providing the result output in some manner while are different in the way input is received and output is presented.
-
-&nbsp;
-
 Approaching development project layout can vary depending on the language and the purpose. Command line interface (CLI) is a bit different from Graphical User Interface (GUI) layouts because the visual aspect of the program is derived only from print statements rather than having an entirely separate object interface from the rest of the code base derived from a UI library related to the language. While different types of programs have various purposes, most programs share the same commonality in that they interact with input to achieve something while providing the resulting output in some manner while are different in the way the input is received and output is presented.
 
 &nbsp;
