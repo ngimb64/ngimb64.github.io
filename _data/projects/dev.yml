@@ -1,3 +1,8 @@
+- title: Kloud Kraken
+  description: AWS cloud based hash cracking system that is powerful, cost effective, and scalable with all sizes of data
+  url: https://github.com/ngimb64/Kloud-Kraken
+  image: kloud_kraken.jpeg
+
 - title: Official Website
   description: Official website utilizing Jekyll static webpages with Tailwind CSS, daisy UI, and GSAP for animations
   url: https://github.com/ngimb64/ngimb64.github.io

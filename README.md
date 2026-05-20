@@ -25,14 +25,25 @@ Dev dependencies should be easily installable with:
 - [Prettier](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 - Also ensure to install npm package `tailwindcss-cli` to avoid annoying warning
 
+To install Tailwind:
+```
+npm install -D tailwindcss@3 postcss autoprefixer
+```
+
 In a separate terminal window, run this command in project root directory to
 ensure tailwind generates CSS based in implemented classes in HTML and JS:
 
-`npx tailwindcss -i ./src/css/input.css -o ./src/css/tailwind.css --autoprefixer --minify --watch`
+```
+npx tailwindcss -i ./src/css/input.css -o ./src/css/tailwind.css --autoprefixer --minify --watch
+```
 
 Then run these commands in the main window in project root directory:
 
-1. `bundle install`
-1. `bundle exec jekyll serve`
+```
+bundle install
+```
+```
+bundle exec jekyll serve
+```
 
 **Note**: Ensure to build the project locally before pushing with `bundle exec jekyll build`
